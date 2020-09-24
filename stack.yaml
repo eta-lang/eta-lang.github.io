@@ -1,0 +1,36 @@
+flags: {}
+extra-package-dbs: []
+packages:
+- .
+- 'markdown'
+extra-deps:
+- ListZipper-1.2.0.2
+- aeson-1.2.3.0
+- attoparsec-iso8601-1.0.0.0
+- base-compat-0.9.3
+- base-orphans-0.5.4
+- bifunctors-5.5
+- bytestring-builder-0.10.8.1.0
+- cabal-doctest-1.0.4
+- conduit-extra-1.2.3.2
+- fast-logger-2.4.10
+- heist-1.0.1.2
+- http-api-data-0.3.7.1
+- mmorph-1.1.0
+- natural-transformation-0.4
+- optparse-applicative-0.14.0.0
+- semigroupoids-5.2.1
+- servant-0.11
+- servant-server-0.11
+- tagged-0.8.5
+- th-abstraction-0.2.6.0
+- transformers-compat-0.5.1.4
+- turtle-1.5.0
+- typed-process-0.2.1.0
+- unix-compat-0.5.0.1
+- unliftio-core-0.1.1.0
+- wai-extra-3.0.21.0
+- warp-3.2.13
+- xml-conduit-1.4.0.4
+- xmlhtml-0.2.4
+resolver: lts-6.27

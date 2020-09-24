@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://eta-lang.org/</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/tutorials</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/cheatsheets</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/faq</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/community</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/contribute/proposals</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/contribute/bug-report</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/contribute/gsoc/2018</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides/eta-user-guide/installation/methods</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides/eta-user-guide/introduction/what-is-eta</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/tutorials/web-services/overview</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/tutorials/from-loops-to-recursion/loops</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/changelog</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/legal</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/api-reference</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/recent-features</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides/java-interop/java-interop-basics</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides/eta-user-guide/basics/quick-start</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides/eta-user-guide/basics/basic-syntax</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides/eta-user-guide/basics/coding-conventions</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides/eta-user-guide/java-interop/jwts</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides/eta-user-guide/java-interop/java-ffi</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides/eta-user-guide/java-interop/arrays-subclasses</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides/eta-user-guide/java-interop/java-generics</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides/eta-user-guide/java-interop/add-java-files</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides/eta-user-guide/functions/overview</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides/eta-user-guide/functions/currying</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides/eta-user-guide/functions/composition</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides/eta-user-guide/functions/application</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/user-guides/eta-user-guide/functions/higher-order-functions</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/tutorials/from-loops-to-recursion/recursion</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/docs/tutorials/web-services/the-api</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/legal/license</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/legal/cla</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eta-lang.org/legal/privacy-policy</loc>
+  <lastmod>2018-01-21T16:37:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

@@ -1,0 +1,72 @@
+name:                eta-website
+version:             0.1.0.0
+synopsis:            Eta website static site generator
+description:         Please see README.md
+homepage:            https://github.com/eta-lang/eta-lang.github.io
+license:             BSD3
+license-file:        LICENSE
+author:              Jyothna Patnam
+maintainer:          jyothsnasrinivas17@gmail.com
+copyright:           2020 Jyothsna Patnam
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable render-website
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  other-modules:       Common
+                       Gen
+                       Docs.Gen
+                       Docs.Markdown
+                       Rebuild.Monad
+                       Rebuild.FileMonitor
+                       Web.Gen
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -Wall -Werror -fno-warn-name-shadowing
+  build-depends:       base >= 4.7 && < 5
+                     , binary
+                     , blaze-builder
+                     , blaze-html
+                     , bytestring
+                     , conduit
+                     , containers
+                     , cryptonite
+                     , directory
+                     , directory-tree
+                     , filepath
+                     , hashable
+                     , heist
+                     , http-types
+                     , lens-family
+                     , ListZipper
+                     , zippers
+                     , map-syntax
+                     , markdown
+                     , memory
+                     , mime-types
+                     , mtl
+                     , servant-server >= 0.11
+                     , split
+                     , text
+                     , time
+                     , temporary
+                     , transformers
+                     , turtle >= 1.3.0
+                     , unix
+                     , xmlhtml
+                     , wai
+                     , wai-app-static
+                     , wai-logger
+                     , warp
+  default-language:    Haskell2010
+  default-extensions:  DataKinds
+                       TypeOperators
+                       TemplateHaskell
+                       NamedFieldPuns
+                       RecordWildCards
+                       OverloadedStrings
+                       TypeFamilies
+                       ExistentialQuantification
+                       MultiParamTypeClasses
+                       TupleSections
+                       LambdaCase

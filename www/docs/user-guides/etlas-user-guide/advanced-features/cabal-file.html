@@ -1,0 +1,854 @@
+<html lang='en-US'>
+
+<head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1' />
+    <meta name='pinterest' content='nopin' />
+    <title>Advanced Features</title>
+    <link rel='canonical' href='https://eta-lang.org' />
+    <meta name='keywords' content='Documentation, Eta, Haskell, Scala, Clojure, JVM, Functional Programming, Functional Programming on the JVM, Java Virtual Machine' />
+    <meta name='description' content='Documentation of Eta Programming Language.' />
+    <link rel='apple-touch-icon' sizes='57x57' href='/favicon/apple-icon-57x57.png' />
+    <link rel='apple-touch-icon' sizes='60x60' href='/favicon/apple-icon-60x60.png' />
+    <link rel='apple-touch-icon' sizes='72x72' href='/favicon/apple-icon-72x72.png' />
+    <link rel='apple-touch-icon' sizes='76x76' href='/favicon/apple-icon-76x76.png' />
+    <link rel='apple-touch-icon' sizes='114x114' href='/favicon/apple-icon-114x114.png' />
+    <link rel='apple-touch-icon' sizes='120x120' href='/favicon/apple-icon-120x120.png' />
+    <link rel='apple-touch-icon' sizes='144x144' href='/favicon/apple-icon-144x144.png' />
+    <link rel='apple-touch-icon' sizes='152x152' href='/favicon/apple-icon-152x152.png' />
+    <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-icon-180x180.png' />
+    <link rel='icon' type='image/png' sizes='192x192' href='/favicon/android-icon-192x192.png' />
+    <link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png' />
+    <link rel='icon' type='image/png' sizes='96x96' href='/favicon/favicon-96x96.png' />
+    <link rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png' />
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel='stylesheet' href='/css/eta-theme.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='/css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto%3A100%2C300%2C400%2C700&ver=5a155dfba583c' type='text/css' media='all' />
+    <link href='https://fonts.googleapis.com/css?family=Cousine' rel='stylesheet' />
+    <link rel='stylesheet' id='jquery-slick-css' href='/css/slick.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='jquery-slick-theme-css' href='/css/slick-theme.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css' />
+    <script type='text/javascript' src='/js/jquery/jquery.js'></script>
+    <script type='text/javascript' src='/js/jquery/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='/js/slick.js'></script>
+</head>
+
+<body class='page-template page-template-custom-pages page-template-page page-template-features page-template-custom-pagespagefeatures-php page page-id-4566 object-4566'>
+
+    <!-- Hero Section -->
+    <div class='hero-container'>
+        <style>
+.dropbtn {
+    background-color: inherit;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 300;
+    border: none;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+}
+
+.mobile-nav .dropbtn{
+  font-size: 22px;
+  text-transform: none;
+  padding-left: 0px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 10px 40px 0px rgba(47, 47, 47, 0.1);
+    z-index: 1;
+}
+
+.mobile-nav .dropdown-content{
+  position: static;
+  background-color: inherit;
+  min-width: inherit;
+  box-shadow: 0px 0px 0px 0px #000000;
+}
+
+.dropdown-content a {
+    color: #5333ed;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {background-color: inherit;}
+
+.mobile-nav .dropdown-content a:hover {background-color: none;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: inherit;
+}
+
+</style>
+<div class='container hero-menu'>
+    <div class='row'>
+        <div class='col-xs-12 pt--50 pt--md--30 pt--xs--30'>
+            <div id='site-menu-outer-container'>
+                <div class='site-menu-container' id='site-menu'>
+                    <div class='site-menu'>
+                        <div class='site-menu__logo'>
+                            <a href='https://eta-lang.org'>
+                              <img alt='Eta Logo' src='/images/eta-logo-docs.svg' src='/images/eta-logo.svg' style='height: 20px;' />
+                            </a>
+                        </div>
+                        <input type='checkbox' id='hamburger-menu-trigger' />
+                        <nav class='site-menu__nav'>
+                            <ul>
+                                <li>
+                                    <a class='active ' href='/'><span>Home</span></a>
+                                </li>
+                                <li>
+                                    <div class='dropdown'>
+                                        <button class='dropbtn active'>Documentation
+                                        <img src='/images/arrow-down.svg' height='10px;' />
+                                        </button>
+                                        <div class='dropdown-content dropdown-hide'>
+                                            <a href='/docs/'>Docs Home</a>
+                                            <a href='/docs/user-guides'>User Guides</a>
+                                            <a href='/docs/tutorials'>Tutorials</a>
+                                            <a href='/docs/cheatsheets'>Cheatsheets</a>
+                                            <a href='/docs/faq'>FAQ</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='dropdown'>
+                                        <button class='dropbtn active'>Community
+                                          <img src='/images/arrow-down.svg' height='10px;' />
+                                        </button>
+                                        <div class='dropdown-content dropdown-hide'>
+                                            <a href='/community'>Community Home</a>
+                                            <a href='/contribute'>Contribute</a>
+                                            <a href='/contribute/proposals'>Proposals</a>
+                                            <a href='/contribute/bug-report'>Bug Reports</a>
+                                            <a href='/contribute/gsoc/2018'>GSoC 2018</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a class=' ' href='https://tour.eta-lang.org/'><span>Tour of Eta</span></a>
+                                </li>
+                                <li>
+                                    <a class=' ' href='https://blog.eta-lang.org'><span>Blog</span></a>
+                                </li>
+                                <li>
+                                    <a class=' ' href='https://github.com/typelead/eta' target='_blank'><span>GitHub</span></a>
+                                </li>
+                                <li>
+                                    <a class='login' href='/docs/user-guides/eta-user-guide/installation/methods'><span>Install</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <label for='hamburger-menu-trigger' class='show-xs-only'>
+                        <svg class style=' ' width='24' height='24' viewBox='0 0 24 24'><g fill-rule='nonzero' fill='white'><path d='M24 4.5c0 .825-.675 1.5-1.5 1.5h-21C.675 6 0 5.325 0 4.5S.675 3 1.5 3h21c.825 0 1.5.675 1.5 1.5zM24 12c0 .825-.675 1.5-1.5 1.5h-21C.675 13.5 0 12.825 0 12s.675-1.5 1.5-1.5h21c.825 0 1.5.675 1.5 1.5zM24 19.5c0 .825-.675 1.5-1.5 1.5h-21C.675 21 0 20.325 0 19.5S.675 18 1.5 18h21c.825 0 1.5.675 1.5 1.5z'></path></g></svg>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class='container hero-content col middle-xs'>
+            <div class='row'>
+                <div class='col-xs-12 col-sm-12 col-lg-12 color--white'>
+                    <h1 class='heading--large'>Advanced Features</h1>
+
+                    <p class='text--large mt--20'>Dive into features for specialized use cases</p>
+                    <div class='resource-bar__search pt--10 show-lg-only'>
+                      <div class='resource-bar__search_placeholder'>
+                        <form class='row middle-xs submitter nocol' method='get' action>
+                          <input name='s' id='search-docs' type='text' required='required' value placeholder style='border-bottom: 1px solid white;' />
+                          <svg class='submitter__trigger' style=' ' width='16' height='16' viewBox='0 0 16 16'><g fill='none' stroke='#fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' data-name='figures and interactions'><circle cx='7.28' cy='7.15' r='3.17'></circle><path d='M11.89 12.02L9.7 9.83'></path></g></svg>
+                        </form>
+                     </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class='row'>
+        <div class='col-lg-3 index-wrapper mt--20 show-lg-only' style='z-index: 1;'>
+            <ul class='bullets-index' id='chaps'>
+                <div class='resource-bar__search pt--10 show-lg-only' id='search_bar_sidenav'>
+                  <div class='resource-bar__search_placeholder'>
+                    <form class='row middle-xs submitter nocol' method='get' action>
+                      <input name='s' id='min-search-docs' type='text' required='required' value placeholder='Search Documentation' style='border-bottom: 1px solid white;' />
+                      <svg class='submitter__trigger' style=' ' width='16' height='16' viewBox='0 0 16 16'><g fill='none' stroke='#5333ed' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' data-name='figures and interactions'><circle cx='7.28' cy='7.15' r='3.17'></circle><path d='M11.89 12.02L9.7 9.83'></path></g></svg>
+                    </form>
+                  </div>
+                </div>
+                <li style="background: url('/images/startup.svg') no-repeat left top;background-size: 28px 28px;background-position: 5px 15px;padding-left: 44px;padding-top: 4px;"><a>Introduction</a><ul class='assignments hide'><li><a href='/docs/user-guides/etlas-user-guide/introduction/what-is-etlas'>What is Etlas?</a></li><li><a href='/docs/user-guides/etlas-user-guide/introduction/philosophy-of-etlas'>Philosophy of Etlas</a></li></ul></li><li style="background: url('/images/installation.svg') no-repeat left top;background-size: 28px 28px;background-position: 5px 15px;padding-left: 44px;padding-top: 4px;"><a>Installation</a><ul class='assignments hide'><li><a href='/docs/user-guides/etlas-user-guide/installation/installation'>Methods</a></li><li><a href='/docs/user-guides/etlas-user-guide/installation/binary'>Binary</a></li><li><a href='/docs/user-guides/etlas-user-guide/installation/source'>Source</a></li></ul></li><li style="background: url('/images/basics.svg') no-repeat left top;background-size: 28px 28px;background-position: 5px 15px;padding-left: 44px;padding-top: 4px;"><a>Basics</a><ul class='assignments hide'><li><a href='/docs/user-guides/etlas-user-guide/basics/initializing'>Initializing</a></li><li><a href='/docs/user-guides/etlas-user-guide/basics/the-build-process'>The Build Process</a></li><li><a href='/docs/user-guides/etlas-user-guide/basics/build-components'>Build Components</a></li></ul></li><li style="background: url('/images/compiler.svg') no-repeat left top;background-size: 28px 28px;background-position: 5px 15px;padding-left: 44px;padding-top: 4px;"><a>Configuration</a><ul class='assignments hide'><li><a href='/docs/user-guides/etlas-user-guide/configuration/workflow-tutorial'>Workflow Tutorial</a></li><li><a href='/docs/user-guides/etlas-user-guide/configuration/dependency-management'>Dependency Management</a></li><li><a href='/docs/user-guides/etlas-user-guide/configuration/project-configuration'>Project Configuration</a></li></ul></li><li style="background: url('/images/invoke.svg') no-repeat left top;background-size: 28px 28px;background-position: 5px 15px;padding-left: 44px;padding-top: 4px;"><a>Advanced Features</a><ul class='assignments'><li><a href='/docs/user-guides/etlas-user-guide/advanced-features/cabal-file'>Cabal File</a></li><li><a href='/docs/user-guides/etlas-user-guide/advanced-features/conditional-configuration'>Conditional Configuration</a></li><li><a href='/docs/user-guides/etlas-user-guide/advanced-features/cabal-project-file'>Cabal Project File</a></li></ul></li><li style="background: url('/images/ide.svg') no-repeat left top;background-size: 28px 28px;background-position: 5px 15px;padding-left: 44px;padding-top: 4px;"><a>Command Reference</a><ul class='assignments hide'><li><a href='/docs/user-guides/etlas-user-guide/command-reference/global-flags'>Global Flags</a></li><li><a href='/docs/user-guides/etlas-user-guide/command-reference/build'>Build</a></li><li><a href='/docs/user-guides/etlas-user-guide/command-reference/freeze'>Freeze</a></li><li><a href='/docs/user-guides/etlas-user-guide/command-reference/update'>Update</a></li><li><a href='/docs/user-guides/etlas-user-guide/command-reference/select'>Select</a></li><li><a href='/docs/user-guides/etlas-user-guide/command-reference/info'>Info</a></li><li><a href='/docs/user-guides/etlas-user-guide/command-reference/list'>List</a></li><li><a href='/docs/user-guides/etlas-user-guide/command-reference/get'>Get</a></li><li><a href='/docs/user-guides/etlas-user-guide/command-reference/clean'>Clean</a></li></ul></li>
+            </ul>
+        </div>
+        <div class='col-lg-9 col-sm-12 col-xs-12 content-wrapper bg--gray pl--50 pr--50 pl--xs--20 pr--xs--20'>
+            <div class='box box--padding--top--20 mt--20 ml--xs--0 pl--xs--0' id='box-main'>
+                <div class='row' id='header-box'>
+                    <div class='col-lg-2 show-lg-only'>
+                      <img src='/images/invoke.svg' alt='Advanced Features' class='header-image' />
+                    </div>
+                    <div class='col-lg-10 col-xs-12 col-sm-12'>
+                        <div class='resource-bar__breadcrumb show-lg-only'>
+                            <nav class='breadcrumb start-lg color--white'>
+                                <ul class='start-lg mt--30 ml--20'>
+                                  <li><a href='/docs/user-guides/etlas-user-guide'>Etlas User Guide</a></li><li><a href="">Advanced Features</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <h3 class='heading--small mb--20 start-lg center-xs center-sm pl--20 pt--10 pt--sm--60' id='header-title'>Cabal File</h3>
+                    </div>
+                </div>
+                <div class='row mr--20 ml--20' id='header-contents'>
+                    <div class='col-lg-1'>
+                    </div>
+                    <div class='col-lg-11 col-sm-12 col-xs-12 center-xs start-lg center-sm'>
+                        <h3 class='heading--medium color--purple mt--20 mb--20'>
+                            Contents
+                        </h3>
+                        <ul class='header-contents-list bullet-list' list-style='1'>
+                          <li><a href='#overview'>Overview</a></li><li><a href='#field-types'>Field Types</a></li><li><a href='#metadata-fields'>Metadata Fields</a></li><li><a href='#library-stanza'>Library Stanza</a></li><li><a href='#executable'>Executable</a></li><li><a href='#test-suites'>Test Suites</a></li><li><a href='#common-fields'>Common Fields</a></li><li><a href='#package-flags'>Package Flags</a></li><li><a href='#source-repositories'>Source Repositories</a></li><li><a href='#next-section'>Next Section</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class='box box--padding--top--20 mt--20 mb--20' id='overview'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Overview
+              <a class='anchor-link' href='#overview'></a>
+            </h3>
+            <p>This entire section is devoted to taking you through all the available configuration options for a single package in its <span class='inline-code'>.cabal</span> file.</p><br /><p>A <span class='inline-code'>.cabal</span> file consists of metadata fields and stanzas. The metadata field describe aspects of the package that do not affect how the package itself is built.</p>
+        </div>
+    </div>
+</div>
+<div class='box box--padding--top--20 mt--20 mb--20' id='field-types'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Field Types
+              <a class='anchor-link' href='#field-types'></a>
+            </h3>
+            <p>The tables in the following subsections contain a <span class='text--bold pb--20'>Field Type</span> column that describes what values are allowed. We describe the field types below.</p><br /><h3 class='heading--small mb--20'>build-type</h3><p>A build type should always have the value <span class='inline-code'>Simple</span>.</p><br /><h3 class='heading--small mb--20'>boolean</h3><p>A boolean can either be <span class='inline-code'>True</span> or <span class='inline-code'>False</span>.</p><br /><h3 class='heading--small mb--20'>dependency-constraint</h3><p>A dependency constraint is of the form <span class='inline-code'>[package-name] [version-range]</span>.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>bytestring &gt; 1.0.0</span></li><li><span class='inline-code'>text &gt;= 1.0.0 && &lt; 2.0.0</span></li><li><span class='inline-code'>binary == 1.0.0</span></li></ul><h3 class='heading--small mb--20'>directory</h3><p>A directory is a <span class='inline-code'>filepath</span> that must necessarily point to a folder.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><p><span class='inline-code'>/usr/include</span></p><br /></li></ul><h3 class='heading--small mb--20'>extension</h3><p>A valid Eta language extension. Prefix <span class='inline-code'>No</span> to disable the extension.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>DataKinds</span></li><li><span class='inline-code'>NoDataKinds</span></li></ul><h3 class='heading--small mb--20'>filepath</h3><p>A filepath is a valid path to a file on the filesystem.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>/usr/include</span></li><li><span class='inline-code'>hello/myfolder</span></li></ul><h3 class='heading--small mb--20'>license</h3><p>A license can take one of the following values:</p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>GPL-[version]</span></li><li><span class='inline-code'>LGPL-[version]</span></li><li><span class='inline-code'>AGPL-[version]</span></li><li><span class='inline-code'>BSD2</span></li><li><span class='inline-code'>BSD3</span></li><li><span class='inline-code'>BSD4</span></li><li><span class='inline-code'>ISC</span></li><li><span class='inline-code'>MIT</span></li><li><span class='inline-code'>MPL-[version]</span></li><li><span class='inline-code'>Apache-[version]</span></li><li><span class='inline-code'>AllRightsReserved</span></li><li><span class='inline-code'>OtherLicense</span></li></ul><p>It can also be any other string, but in that case, it has no special treatment from Etlas since it won't be recognized.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>GPL-1.0</span></li><li><span class='inline-code'>RandomLicense</span></li></ul><h3 class='heading--small mb--20'>list[X]</h3><p>A list is a whitespace-separated sequence of character sequences which are of type <span class='inline-code'>X</span>. You can add any amount of whitespace, including newlines, before and after the commas.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>/path1/path2 /path3/path4</span> (<span class='inline-code'>list[filepath]</span>)</li><li><span class='inline-code'>1.2.3.4      4.5.6  7.8.9</span> (<span class='inline-code'>list[version]</span>)</li></ul><h3 class='heading--small mb--20'>comma-list[X]</h3><p>A comma list is a comma-separated sequence of character sequences which are of type <span class='inline-code'>X</span>. You can add any amount of whitespace, including newlines, between <span class='inline-code'>X</span>s.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>/path1/path2   ,    /path3/path4</span> (<span class='inline-code'>list[filepath]</span>)</li><li><span class='inline-code'>1.2.3.4, 4.5.6, 7.8.9</span> (<span class='inline-code'>list[version]</span>)</li></ul><h3 class='heading--small mb--20'>module</h3><p>A module is a <span class='inline-code'>.</span> separated sequence of alphanumeric character sequences that begin with a capital letter.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>MyModule</span></li><li><span class='inline-code'>Hello.World</span></li><li><span class='inline-code'>A.B.C</span></li></ul><h3 class='heading--small mb--20'>maven-dependency</h3><p>A Maven dependency is of the form <span class='inline-code'>[group-id]:[artifact-id]:[version]</span> where</p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>[group-id]</span> is the group ID of the Maven artifact</li><li><span class='inline-code'>[artifact-id]</span> is the artifact ID of the Maven artifact</li><li><span class='inline-code'>[version]</span> is the version of the Maven artifact</li></ul><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>org.apache.commons:commons-lang3:3.7</span></li><li><span class='inline-code'>com.google.guava:guava:25.0-jre</span></li></ul><h3 class='heading--small mb--20'>maven-repo</h3><p>A Maven repository is a location which Etlas can use to resolve a Maven dependency. It can be a URL or one of the keywords listed below.</p><br /><table class='markdown-table'><thead><tr><td width='19.024390243902438%' align='left'> Keyword</td><td width='40.97560975609756%' align='right'> Maven Repository URL</td></tr></thead><tbody><tr><td align='left'> <span class='inline-code'>central</span></td><td align='right'> <span class='inline-code'>https://repo1.maven.org/maven2/</span></td></tr><tr><td align='left'> <span class='inline-code'>javaNet1</span></td><td align='right'> <span class='inline-code'>http://download.java.net/maven/1/</span></td></tr><tr><td align='left'> <span class='inline-code'>sonatype:[type]</span></td><td align='right'> <span class='inline-code'>https://oss.sonatype.org/content/repositories/[type]</span></td></tr><tr><td align='left'> <span class='inline-code'>jcenter</span></td><td align='right'> <span class='inline-code'>https://jcenter.bintray.com/</span></td></tr><tr><td align='left'> <span class='inline-code'>bintray:[owner]:[repo]</span></td><td align='right'> <span class='inline-code'>https://dl.bintray.com/[owner]/[repo]/</span></td></tr></tbody></table><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>[type]</span> should be one of <span class='inline-code'>public</span>, <span class='inline-code'>snapshots</span>, or <span class='inline-code'>releases</span>.</li><li><span class='inline-code'>[owner]</span> should be the owner of the repository and <span class='inline-code'>[repo]</span> should be the name of the Bintray repository.</li></ul><p><span class='text--bold pb--20'>NOTE:</span> If you need to access a Maven repository that requires credentials, you can specify the URL in the form <span class='inline-code'>http://[user]:[pass]@[repo-url]</span>.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>jcenter</span></li><li><span class='inline-code'>central</span></li><li><span class='inline-code'>https://dl.bintray.com/theanilpaudel/android/</span></li><li><span class='inline-code'>bintray:theanilpaudel:android</span></li></ul><h3 class='heading--small mb--20'>package-name</h3><p>A package name consists of alpha-numeric character sequences separated by <span class='inline-code'>-</span>. Note that each alpha-numeric sequence <span class='text--bold pb--20'>must</span> contain <span class='text--bold pb--20'>at least one</span> alphabetic character.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>sompackage</span></li><li><span class='inline-code'>my-package</span></li><li><span class='inline-code'>hello-123a</span></li><li><span class='inline-code'>h123-package</span></li></ul><h3 class='heading--small mb--20'>source-repository-type</h3><p>A source repository type can be any one of the following:</p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>git</span></li><li><span class='inline-code'>mercurial</span></li><li><span class='inline-code'>darcs</span></li><li><span class='inline-code'>svn</span></li><li><span class='inline-code'>cvs</span></li><li><span class='inline-code'>bazaar</span></li><li><span class='inline-code'>arch</span></li><li><span class='inline-code'>monotone</span></li></ul><h3 class='heading--small mb--20'>stability</h3><p>A stability can be any character sequence that describes the stability of the package.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>alpha</span></li><li><span class='inline-code'>experimental</span></li><li><span class='inline-code'>provisional</span></li><li><span class='inline-code'>stable</span></li></ul><h3 class='heading--small mb--20'>strict-comma-list[X]</h3><p>A strict comma list is just like a <span class='inline-code'>comma-list</span> except whitespace is not allowed before or after the comma.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>/path1/path2,/path3/path4</span> (<span class='inline-code'>list[filepath]</span>)</li><li><span class='inline-code'>1.2.3.4,4.5.6,7.8.9</span> (<span class='inline-code'>list[version]</span>)</li></ul><h3 class='heading--small mb--20'>test-suite-type</h3><p>A test suite type describes the way a test should be run. Etlas only supports <span class='inline-code'>exitcode-stdio-1.0</span>.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><p><span class='inline-code'>exitcode-stdio-1.0</span></p><br /></li></ul><h3 class='heading--small mb--20'>package-executable</h3><p>A package executable is of the form <span class='inline-code'>[package-name]-[any]</span> where <span class='inline-code'>[any]</span> is the name of the executable.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>alex:alex</span></li><li><span class='inline-code'>happy:happy</span></li></ul><h3 class='heading--small mb--20'>version</h3><p>A version consists of numeric sequences separated by <span class='inline-code'>.</span>.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>1</span></li><li><span class='inline-code'>1.0.0</span></li><li><span class='inline-code'>12.1234.203</span></li></ul><h3 class='heading--small mb--20'>version-range</h3><p>A version range consists of a comparison operator followed by a <span class='inline-code'>version</span></p><br /><p>Comparison operators:</p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>&gt;=</span></li><li><span class='inline-code'>&gt;</span></li><li><span class='inline-code'>&lt;</span></li><li><span class='inline-code'>&lt;=</span></li><li><span class='inline-code'>==</span></li></ul><p>The conjunction operator <span class='inline-code'>&&</span> can be used to combine multiple <span class='inline-code'>version-range</span>s.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>&gt;= 1.0</span></li><li><span class='inline-code'>&lt; 1.0 && &gt; 0.5</span></li><li><span class='inline-code'>== 1.0.0</span></li></ul>
+        </div>
+    </div>
+</div>
+<div class='box box--padding--top--20 mt--20 mb--20' id='metadata-fields'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Metadata Fields
+              <a class='anchor-link' href='#metadata-fields'></a>
+            </h3>
+            <p>Other than <span class='inline-code'>name</span>, <span class='inline-code'>version</span>, and <span class='inline-code'>build-type</span>, every other field is optional.</p><br /><table class='markdown-table'><thead><tr><td width='20.2020202020202%' align='left'> Field</td><td width='19.19191919191919%'> Field Type</td><td width='60.60606060606061%' align='right'> Description</td></tr></thead><tbody><tr><td align='left'> <span class='inline-code'>name</span></td><td align='center'> <span class='inline-code'>package-name</span></td><td align='right'> Name of the package</td></tr><tr><td align='left'> <span class='inline-code'>version</span></td><td align='center'> <span class='inline-code'>version</span></td><td align='right'> Version of the package</td></tr><tr><td align='left'> <span class='inline-code'>cabal-version</span></td><td align='center'> <span class='inline-code'>version-range</span></td><td align='right'> Versions of the Cabal specifications supported</td></tr><tr><td align='left'> <span class='inline-code'>build-type</span></td><td align='center'> <span class='inline-code'>build-type</span></td><td align='right'> Type of build used by this package</td></tr><tr><td align='left'> <span class='inline-code'>license</span></td><td align='center'> <span class='inline-code'>license</span></td><td align='right'> License type that pertains to the package</td></tr><tr><td align='left'> <span class='inline-code'>license-file</span></td><td align='center'> <span class='inline-code'>filepath</span></td><td align='right'> Path to the license file</td></tr><tr><td align='left'> <span class='inline-code'>license-files</span></td><td align='center'> <span class='inline-code'>list[filepath]</span></td><td align='right'> List of paths to the license files that pertain to this package</td></tr><tr><td align='left'> <span class='inline-code'>copyright</span></td><td align='center'> <span class='inline-code'>any</span></td><td align='right'> Copyright notice with holder and years held</td></tr><tr><td align='left'> <span class='inline-code'>author</span></td><td align='center'> <span class='inline-code'>any</span></td><td align='right'> Author of the package</td></tr><tr><td align='left'> <span class='inline-code'>maintainer</span></td><td align='center'> <span class='inline-code'>list[any]</span></td><td align='right'> List contact information of maintainers of the package</td></tr><tr><td align='left'> <span class='inline-code'>stability</span></td><td align='center'> <span class='inline-code'>stability</span></td><td align='right'> Stability level of the package</td></tr><tr><td align='left'> <span class='inline-code'>homepage</span></td><td align='center'> <span class='inline-code'>url</span></td><td align='right'> Package homepage</td></tr><tr><td align='left'> <span class='inline-code'>bug-reports</span></td><td align='center'> <span class='inline-code'>url</span></td><td align='right'> URL where users should direct bug reports</td></tr><tr><td align='left'> <span class='inline-code'>package-url</span></td><td align='center'> <span class='inline-code'>url</span></td><td align='right'> Location of a source bundle for the package</td></tr><tr><td align='left'> <span class='inline-code'>synopsis</span></td><td align='center'> <span class='inline-code'>any</span></td><td align='right'> Short description of the package</td></tr><tr><td align='left'> <span class='inline-code'>description</span></td><td align='center'> <span class='inline-code'>any</span></td><td align='right'> Long description of the package</td></tr><tr><td align='left'> <span class='inline-code'>category</span></td><td align='center'> <span class='inline-code'>any</span></td><td align='right'> Category of the package</td></tr><tr><td align='left'> <span class='inline-code'>data-files</span></td><td align='center'> <span class='inline-code'>list[filepath]</span></td><td align='right'> List of files to be installed for runtime use by the package</td></tr><tr><td align='left'> <span class='inline-code'>data-dir</span></td><td align='center'> <span class='inline-code'>directory</span></td><td align='right'> Directory where Etlas looks for data files to install</td></tr><tr><td align='left'> <span class='inline-code'>extra-tmp-files</span></td><td align='center'> <span class='inline-code'>list[filepath]</span></td><td align='right'> List of additional files/directories to be removed by <a href="" target='_blank'>clean</a></td></tr></tbody></table>
+        </div>
+    </div>
+</div>
+<div class='box box--padding--top--20 mt--20 mb--20' id='library-stanza'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Library Stanza
+              <a class='anchor-link' href='#library-stanza'></a>
+            </h3>
+            <p>The library stanza starts with a <span class='inline-code'>library</span> keyword and all the fields of the stanza must be indented underneath. There can only be one library in a package and the name is taken from the <span class='inline-code'>name</span> metadata field above.</p><br /><p>The library stanza should contain the following fields:</p><br /><table class='markdown-table'><thead><tr><td width='20.2020202020202%' align='left'> Field</td><td width='19.19191919191919%'> Field Type</td><td width='60.60606060606061%' align='right'> Description</td></tr></thead><tbody><tr><td align='left'> <span class='inline-code'>exposed-modules</span></td><td align='center'> <span class='inline-code'>list[module]</span></td><td align='right'> A list of modules exported by this package</td></tr></tbody></table><br /><p>The library stanza supports the <a href='#common-fields' target='_blank'>common fields</a> below.</p><br /><h3 class='heading--small mb--20'>Example</h3><div class='highlight'><pre><span></span><span class='n'>name</span><span class='o'>:</span> <span class='n'>hello</span>
+
+<span class='n'>library</span>
+  <span class='n'>exposed</span><span class='o'>-</span><span class='n'>modules</span><span class='o'>:</span> <span class='n'>Hello</span>
+</pre></div>
+
+        </div>
+    </div>
+</div>
+<div class='box box--padding--top--20 mt--20 mb--20' id='executable'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Executable
+              <a class='anchor-link' href='#executable'></a>
+            </h3>
+            <p>The executable stanza starts with a <span class='inline-code'>executable</span> keyword followed by the name of the executable and all the fields of the stanza must be indented underneath. There can any number of executables in a package.</p><br /><p>The name of the executable can be anything, but it shouldn't contain spaces.</p><br /><p>The executable stanza must contain the following fields:</p><br /><table class='markdown-table'><thead><tr><td width='20.2020202020202%' align='left'> Field</td><td width='19.19191919191919%'> Field Type</td><td width='60.60606060606061%' align='right'> Description</td></tr></thead><tbody><tr><td align='left'> <span class='inline-code'>main-is</span></td><td align='center'> <span class='inline-code'>filepath</span></td><td align='right'> The path to the <span class='inline-code'>.hs</span> file containing the <span class='inline-code'>Main</span> module</td></tr></tbody></table><br /><p>The executable stanza supports the <a href='#common-fields' target='_blank'>common fields</a> below.</p><br /><h3 class='heading--small mb--20'>Example</h3><div class='highlight'><pre><span></span>executable my-executable
+  main-is: Main.hs
+</pre></div>
+
+        </div>
+    </div>
+</div>
+<div class='box box--padding--top--20 mt--20 mb--20' id='test-suites'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Test Suites
+              <a class='anchor-link' href='#test-suites'></a>
+            </h3>
+            <p>The test suite stanza starts with a <span class='inline-code'>test-suite</span> keyword followed by the name of the test suite and all the fields of the stanza must be indented underneath. There can any number of test suites in a package.</p><br /><p>The name of the test suite can be anything, but it shouldn't contain spaces.</p><br /><p>The test suite stanza must contain the following fields:</p><br /><table class='markdown-table'><thead><tr><td width='20.2020202020202%' align='left'> Field</td><td width='19.19191919191919%'> Field Type</td><td width='60.60606060606061%' align='right'> Description</td></tr></thead><tbody><tr><td align='left'> <span class='inline-code'>type</span></td><td align='center'> <span class='inline-code'>test-suite-type</span></td><td align='right'> Type of test suite to execute</td></tr><tr><td align='left'> <span class='inline-code'>main-is</span></td><td align='center'> <span class='inline-code'>filepath</span></td><td align='right'> Path to the <span class='inline-code'>.hs</span> file containing the <span class='inline-code'>Main</span> module</td></tr></tbody></table><br /><p>The test suite stanza supports the <a href='#common-fields' target='_blank'>common fields</a> below.</p><br /><h3 class='heading--small mb--20'>Example</h3><div class='highlight'><pre><span></span>test-suite my-test-suite
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+</pre></div>
+
+        </div>
+    </div>
+</div>
+<div class='box box--padding--top--20 mt--20 mb--20' id='common-fields'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Common Fields
+              <a class='anchor-link' href='#common-fields'></a>
+            </h3>
+            <p>Common fields shared among library, executable, and test components for building and configuring those components.</p><br /><table class='markdown-table'><thead><tr><td width='21.09375%' align='left'> Field</td><td width='32.03125%'> Field Type</td><td width='46.875%' align='right'> Description</td></tr></thead><tbody><tr><td align='left'> <span class='inline-code'>build-depends</span></td><td align='center'> <span class='inline-code'>comma-list[dependency-constraint]</span></td><td align='right'> List of dependencies required for this package</td></tr><tr><td align='left'> <span class='inline-code'>other-modules</span></td><td align='center'> <span class='inline-code'>list[module]</span></td><td align='right'> List of modules used by the component but not exposed to users</td></tr><tr><td align='left'> <span class='inline-code'>hs-source-dirs</span></td><td align='center'> <span class='inline-code'>list[directory]</span></td><td align='right'> Root directories for modules. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>.</span></td></tr><tr><td align='left'> <span class='inline-code'>default-extensions</span></td><td align='center'> <span class='inline-code'>list[extension]</span></td><td align='right'> List of language extensions used by every module</td></tr><tr><td align='left'> <span class='inline-code'>build-tool-depends</span></td><td align='center'> <span class='inline-code'>list[package-executable]</span></td><td align='right'> List of programs needed to build this component</td></tr><tr><td align='left'> <span class='inline-code'>buildable</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Is the component buildable? <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>True</span></td></tr><tr><td align='left'> <span class='inline-code'>eta-options</span></td><td align='center'> <span class='inline-code'>list[any]</span></td><td align='right'> Arguments for the Eta compiler</td></tr><tr><td align='left'> <span class='inline-code'>includes</span></td><td align='center'> <span class='inline-code'>list[filepath]</span></td><td align='right'> A list of header files to be sent to the Eta preprocessor</td></tr><tr><td align='left'> <span class='inline-code'>install-includes</span></td><td align='center'> <span class='inline-code'>list[filepath]</span></td><td align='right'> A list of header files from this package to be installed.</td></tr><tr><td align='left'> <span class='inline-code'>include-dirs</span></td><td align='center'> <span class='inline-code'>list[directory]</span></td><td align='right'> List of directories to search for header files for the Eta preprocessor</td></tr><tr><td align='left'> <span class='inline-code'>java-sources</span></td><td align='center'> <span class='inline-code'>list[filepath]</span></td><td align='right'> List of Java source file dependencies (<span class='inline-code'>.java</span>, <span class='inline-code'>.class</span>, <span class='inline-code'>.jar</span>)</td></tr><tr><td align='left'> <span class='inline-code'>cpp-options</span></td><td align='center'> <span class='inline-code'>list[any]</span></td><td align='right'> Arguments for the Eta preprocessor</td></tr><tr><td align='left'> <span class='inline-code'>maven-depends</span></td><td align='center'> <span class='inline-code'>list[maven-dependency]</span></td><td align='right'> List of Maven dependencies</td></tr><tr><td align='left'> <span class='inline-code'>maven-repos</span></td><td align='center'> <span class='inline-code'>list[maven-repo]</span></td><td align='right'> List of Maven repositories for resolving Maven dependencies. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>central</span></td></tr></tbody></table>
+        </div>
+    </div>
+</div>
+<div class='box box--padding--top--20 mt--20 mb--20' id='package-flags'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Package Flags
+              <a class='anchor-link' href='#package-flags'></a>
+            </h3>
+            <p>You can declare conditional flags to allow users to build different flavors of your package depending on their need.</p><br /><p>You can declare a flag with the <span class='inline-code'>flag</span> keyword followed by the name of the flag. The fields allowed for a flag are listed in the table below.</p><br /><table class='markdown-table'><thead><tr><td width='20.2020202020202%' align='left'> Field</td><td width='19.19191919191919%'> Field Type</td><td width='60.60606060606061%' align='right'> Description</td></tr></thead><tbody><tr><td align='left'> <span class='inline-code'>description</span></td><td align='center'> <span class='inline-code'>any</span></td><td align='right'> The description of this flag</td></tr><tr><td align='left'> <span class='inline-code'>default</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> The default value of the flag. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>True</span></td></tr><tr><td align='left'> <span class='inline-code'>manual</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> The value of the flag when the flag is passed as an argument to Etlas. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr></tbody></table><br /><p>Check out the section on <a href='./conditional-configuration' target='_blank'>Conditional Configuration</a> for more information on how to use these flags.</p><br /><h3 class='heading--small mb--20'>Example</h3><div class='highlight'><pre><span></span>flag developer
+  description: operate in developer mode
+  default: False
+  manual: True
+</pre></div>
+
+        </div>
+    </div>
+</div>
+<div class='box box--padding--top--20 mt--20 mb--20' id='source-repositories'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Source Repositories
+              <a class='anchor-link' href='#source-repositories'></a>
+            </h3>
+            <p>You can declare the location of your package's source if it's losted in a source control management (SCM) system like Git, Mercurial, and so on.</p><br /><p>You can declare a source repository with the <span class='inline-code'>source-repository</span> keyword followed by either <span class='inline-code'>this</span> or <span class='inline-code'>head</span>.</p><br /><p>The fields allowed for a source repository are listed in the table below.</p><br /><table class='markdown-table'><thead><tr><td width='18.69158878504673%' align='left'> Field</td><td width='25.233644859813083%'> Field Type</td><td width='56.074766355140184%' align='right'> Description</td></tr></thead><tbody><tr><td align='left'> <span class='inline-code'>type</span></td><td align='center'> <span class='inline-code'>source-repository-type</span></td><td align='right'> Name of the SCM used for the repository</td></tr><tr><td align='left'> <span class='inline-code'>location</span></td><td align='center'> <span class='inline-code'>url</span></td><td align='right'> Location of the repository</td></tr><tr><td align='left'> <span class='inline-code'>branch</span></td><td align='center'> <span class='inline-code'>any</span></td><td align='right'> Branch for the respective SCM</td></tr><tr><td align='left'> <span class='inline-code'>tag</span></td><td align='center'> <span class='inline-code'>any</span></td><td align='right'> Tag for the respective SCM</td></tr><tr><td align='left'> <span class='inline-code'>subdir</span></td><td align='center'> <span class='inline-code'>directory</span></td><td align='right'> Subfolder of the repository that is a standalone Etlas package</td></tr><tr><td align='left'> <span class='inline-code'>module</span></td><td align='center'> <span class='inline-code'>any</span></td><td align='right'> Required for the CVS and should not be used otherwise</td></tr></tbody></table><br /><h3 class='heading--small mb--20'>Example</h3><div class='highlight'><pre><span></span>source-repository this
+  type: git
+  location: https://github.com/Jyothsnasrinivas/eta-jdbc
+  tag: 0.2.0.0
+</pre></div>
+
+        </div>
+    </div>
+</div>
+<div class='box box--padding--top--20 mt--20 mb--20' id='next-section'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Next Section
+              <a class='anchor-link' href='#next-section'></a>
+            </h3>
+            <p>In the next section, we will learn how to configure our packages conditionally.</p>
+        </div>
+    </div>
+</div>
+
+            <div class='row mr--20 ml--20 pt--40 pb--60'>
+              <div class='col-md-4 start-md'>
+                <a href='/docs/user-guides/etlas-user-guide/configuration/project-configuration' class='button--purple'>Previous</a>
+              </div>
+              <div class='col-md-4 center-md show-lg-only'>
+                <a class='button--purple ' href='#'>Read again</a>
+              </div>
+              <div class='col-md-4 center-md show-xs-only'>
+
+              </div>
+              <div class='col-md-4 end-md end-sm'>
+                <a href='/docs/user-guides/etlas-user-guide/advanced-features/conditional-configuration' class='button--purple'>Next</a>
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <script type='text/javascript'>
+        function switchImage(index) {
+            var images = document.getElementsByClassName('screen__image');
+            for (i = 0; i < images.length; i++) {
+                if (i === index) {
+                    images[i].style = 'display:inline'
+                } else {
+                    images[i].style = 'display:none'
+                }
+            }
+        }
+    </script>
+
+    <style media='screen'>
+        #my-eta-man {
+            position: absolute;
+            z-index: 100;
+            bottom: -101px;
+            left: -65px
+        }
+        /*1200px*/
+
+        @media only screen and (max-width: 75em) {
+            #my-eta-man {
+                display: none;
+            }
+        }
+        /* Hero Section */
+
+        .hero-container {
+            height: 68vh;
+            min-height: 500px;
+            background-image: url('/images/features-hero.svg');
+            /*position: sticky;
+  top: 0;*/
+        }
+
+        .hero-container h1 {
+            position: relative;
+            top: 12px;
+        }
+
+        .hero-content {
+            flex: 1;
+            display: flex;
+            z-index: 100;
+            align-items: center;
+            margin-top: -102px;
+        }
+
+        @media only screen and (max-width: 75em) {
+            .hero-container {
+                height: 0px;
+            }
+            .hero-content {
+                margin-top: 100px;
+            }
+        }
+        /* 768px */
+
+        @media only screen and (max-width: 48em) {
+            .hero-container {
+                background-image: -webkit-linear-gradient( -30deg, rgb(44, 212, 217) 49%, rgb(83, 51, 237) 100%);
+                background-image: -moz-linear-gradient( -30deg, rgb(44, 212, 217) 49%, rgb(83, 51, 237) 100%);
+                background-image: -ms-linear-gradient( -30deg, rgb(44, 212, 217) 49%, rgb(83, 51, 237) 100%);
+                max-height: auto;
+                min-height: 0px;
+                margin-left: 0px;
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+            .hero-content {
+                margin: 0px;
+                padding-top: 40px;
+                padding-bottom: 120px;
+            }
+        }
+
+        #eta-screen {
+            max-width: 912px;
+        }
+        /*1200px */
+
+        @media only screen and (max-width: 75em) {
+            #eta-screen img {
+                width: 100%;
+                height: auto;
+            }
+            #eta-screen {
+                margin: 0 auto;
+                margin-top: 66px;
+            }
+            #eta-man {
+                display: none;
+            }
+        }
+        /*768px*/
+
+        @media only screen and (max-width: 48em) {
+            #eta-screen {
+                margin-top: 20px;
+            }
+        }
+        /*1200px*/
+
+        @media only screen and (min-width: 75em) {
+            #eta-screen {
+                position: absolute;
+                top: 50px;
+                right: -160px
+            }
+            #eta-screen img {
+                display: block;
+            }
+        }
+        /* Peace Of Mind */
+
+        #peace-of-mind-group {
+            position: absolute;
+            right: -120px;
+            top: -90px;
+            z-index: -1
+        }
+
+        #peace-of-mind-group+div {
+            z-index: 400;
+            position: relative;
+        }
+        /*768px*/
+
+        @media only screen and (max-width: 47.9999em) {
+            #peace-of-mind-group {
+                position: relative;
+                top: 0px;
+                left: -20px;
+                right: 0px;
+                transform: scaleX(-1);
+                filter: FlipH;
+            }
+        }
+
+        #support-that-cares-group {
+            position: absolute;
+            left: 40px;
+            top: -200px;
+            z-index: -1
+        }
+        /*768px*/
+
+        @media only screen and (max-width: 47.9999em) {
+            #support-that-cares-group {
+                position: relative;
+                top: 0px;
+                left: 0px;
+            }
+        }
+        /* Support That Cares */
+
+        #support-that-cares-group+div {
+            position: relative;
+            z-index: -1
+        }
+
+        #features-group {
+            position: absolute;
+            right: 30px;
+            width: 65%;
+            top: -115px;
+            z-index: 200
+        }
+
+        #features-group+div {
+            position: relative;
+            z-index: -1
+        }
+
+        .bg--blue--purple {
+            background: #150773;
+        }
+        /*1152pxpx*/
+
+        @media only screen and (min-width: 72em) {
+            .bg--blue--purple {
+                position: relative;
+                background-image: -moz-linear-gradient(0deg, #150773 0%, #150773 calc(49.999999% + 128px), #3D23C0 calc(50% + 128px), #3D23C0 100%);
+                background-image: -webkit-linear-gradient(0deg, #150773 0%, #150773 calc(50% + 128px), #3D23C0 calc(50% + 128px), #3D23C0 100%);
+            }
+        }
+
+        #features-group+div {
+            z-index: 400;
+            position: relative;
+        }
+
+        .grey-box {
+            background-color: #E1EAF7;
+            margin-top: 30px;
+            border-radius: 3px;
+            text-align: left;
+            padding: 30px;
+        }
+
+        .grey-box ul {
+            padding: 20px;
+            padding-left: 50px;
+            list-style-type: disc
+        }
+
+        .grey-box ul li a {
+            font-family: 'Brandon Text';
+            text-decoration: none;
+        }
+
+        #left-container {
+            margin-left: 0px;
+            padding-left: 0px;
+            height: 100vh;
+        }
+
+        .container .index-wrapper {
+            z-index: 1000;
+            display: block;
+            padding: 20px;
+            height: 80vh;
+            position: -webkit-sticky; // required for Safari
+            position: sticky;
+            top: 0;
+        }
+
+        .index-wrapper .bullets-index {
+            text-align: left;
+            padding-left: 50px;
+            padding-bottom: 30px;
+            font-family: 'Brandon Text';
+            top: 0;
+            display: block;
+            position: -webkit-sticky;
+            position: sticky;
+        }
+
+        .bullets-index li {
+            line-height: 3;
+        }
+
+        .bullets-index li a {
+            text-decoration: none;
+        }
+
+        .container .content-wrapper {
+            max-width: 940px;
+            padding: 32px 48px;
+            padding-right: 250px;
+            position: relative;
+        }
+
+        li.getstarted {
+            background: url('/images/startup.svg') no-repeat left top;
+            background-size: 28px 28px;
+            background-position: 5px 15px;
+            padding-left: 44px;
+            padding-top: 4px;
+        }
+
+        #chaps>li>ul.hide {
+            display: none;
+        }
+
+        #box-main {
+            padding: 0px;
+        }
+
+        #header-box {
+            height: 150px;
+            background-color: rgb(44, 212, 217);
+        }
+
+        .header-image {
+            height: 50px;
+            background-color: rgb(255, 255, 255);
+            /*border-radius: 5px;*/
+            padding: 10px;
+            margin-left: 65px;
+            margin-top: 30px;
+        }
+
+        #header-title {
+            color: white;
+            font-size: 30px;
+        }
+
+        #header-contents {
+            padding: 20px;
+        }
+
+        ol.header-contents-list li {
+            line-height: 2;
+        }
+
+        ol.header-contents-list li::before {
+            color: #5333ed;
+        }
+
+        .header-contents-list li a {
+            text-decoration: none;
+            font-family: 'Brandon Text'
+        }
+
+        body {
+            overflow-x: visible;
+        }
+        table.highlighttable{
+          background: #1C3041;
+          margin-bottom: 20px;
+          width: 100%;
+          overflow-x: auto;
+        }
+
+        pre {
+          font-family: 'Cousine', monospace;
+          font-size: 15px;
+          padding: 15px;
+          overflow-x: auto;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          text-align: justify;
+        }
+        td.linenos{
+          width: 40px;
+          border-right: 1px solid #6E7076;
+        }
+        .hide {
+          display: none;
+        }
+        input::placeholder {
+          color: grey;
+        }
+        input:focus::placeholder {
+          color: #eee;
+        }
+        #search_bar_sidenav input{
+          border-bottom-color: black;
+          background: #eee;
+        }
+        #search_bar_sidenav svg{
+          background: #eee;
+          width: 30px;
+        }
+
+        table.markdown-table{
+          margin-left: auto;
+          margin-right: auto;
+        }
+        table.markdown-table td,
+        th {
+            padding: 10px;
+
+        }
+
+        table.markdown-table tr {
+            border: 1px solid #dddddd;
+        }
+        table.markdown-table thead{
+          color: #2cd4d9;
+          font-weight: 500;
+          text-align: center;
+        }
+        table.markdown-table span.inline-code{
+          border: none;
+          font-size: 13px;
+          font-family: 'Cousine', monospace;
+        }
+
+        a.anchor-link {
+          background-image: url('/images/hashtag.svg');
+          background-size: 20px 20px;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          opacity: 0.2;
+        }
+
+        .box:hover .row h3 a.anchor-link{
+          opacity: 1;
+        }
+
+        i {
+          font-style: italic;
+        }
+
+        /*768px*/
+
+        @media only screen and (max-width: 47.9999em) {
+            #features-group {
+                position: relative;
+                top: -0px;
+                width: 400px;
+                right: 0px;
+                transform: scaleX(-1);
+                filter: FlipH;
+            }
+            pre {
+              font-size: 12px;
+            }
+        @media only screen and (max-width: 320px) {
+            pre {
+              font-size: 10px;
+            }
+        @media only screen and (max-width: 75em) {
+          ul.bullet-list {
+            list-style-type: none;
+          }
+        }
+
+        }
+    </style>
+    <script type='text/javascript' src='/js/scripts/jquery.accordion.js'></script>
+    <script type='text/javascript' src='/js/scripts/smoothscroll.js'></script>
+    <script type='text/javascript' src='/js/scripts.js'></script>
+
+
+    <script type='text/javascript'>
+        var $ = jQuery;
+        $("#chaps > li").click(function() {
+            $(this).find("ul.assignments").toggleClass('hide');
+        });
+        $('a[href^="#"]').click(function() {
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top
+            }, 500);
+            return false;
+        });
+    </script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-89651019-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js'></script>
+    <script type='text/javascript'>
+    docsearch({
+      apiKey: 'f929f0935053f931f73bce38eef57ba5',
+      indexName: 'eta-lang',
+      inputSelector: '#search-docs',
+      debug: true // Set debug to true if you want to inspect the dropdown
+    });
+    docsearch({
+      apiKey: 'f929f0935053f931f73bce38eef57ba5',
+      indexName: 'eta-lang',
+      inputSelector: '#min-search-docs',
+      debug: true // Set debug to true if you want to inspect the dropdown
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,468 @@
+<html lang='en-US'>
+
+<head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1' />
+    <meta name='theme-color' content='#ffffff ' />
+    <title>Legal - privacy | The Eta Programming Language</title>
+    <meta name='description' content='Privacy of Eta Programming Language.' />
+    <meta name='pinterest' content='nopin' />
+    <link rel='canonical' href='https://eta-lang.org' />
+    <link rel='apple-touch-icon' sizes='57x57' href='/favicon/apple-icon-57x57.png' />
+    <link rel='apple-touch-icon' sizes='60x60' href='/favicon/apple-icon-60x60.png' />
+    <link rel='apple-touch-icon' sizes='72x72' href='/favicon/apple-icon-72x72.png' />
+    <link rel='apple-touch-icon' sizes='76x76' href='/favicon/apple-icon-76x76.png' />
+    <link rel='apple-touch-icon' sizes='114x114' href='/favicon/apple-icon-114x114.png' />
+    <link rel='apple-touch-icon' sizes='120x120' href='/favicon/apple-icon-120x120.png' />
+    <link rel='apple-touch-icon' sizes='144x144' href='/favicon/apple-icon-144x144.png' />
+    <link rel='apple-touch-icon' sizes='152x152' href='/favicon/apple-icon-152x152.png' />
+    <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-icon-180x180.png' />
+    <link rel='icon' type='image/png' sizes='192x192' href='/favicon/android-icon-192x192.png' />
+    <link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png' />
+    <link rel='icon' type='image/png' sizes='96x96' href='/favicon/favicon-96x96.png' />
+    <link rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png' />
+    <link rel='stylesheet' href='/css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C300%2C400%2C700&ver=5a15749b3014b' type='text/css' media='all' />
+    <link rel='stylesheet' id='jquery-slick-css' href='/css/slick.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='jquery-slick-theme-css' href='/css/slick-theme.css' type='text/css' media='all' />
+    <script type='text/javascript' src='/js/jquery/jquery.js'></script>
+    <script type='text/javascript' src='/js/jquery/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='/js/slick.js'></script>
+</head>
+
+<body class='page-template page-template-custom-pages page-template-page page-template-page-no-sidebar page-template-custom-pagespagepage-no-sidebar-php page page-id-4664 object-4664'>
+    <div class='bg--gradient--dark-light-blue'>
+      <style>
+.dropbtn {
+    background-color: inherit;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 300;
+    border: none;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+}
+
+.mobile-nav .dropbtn{
+  font-size: 22px;
+  text-transform: none;
+  padding-left: 0px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 10px 40px 0px rgba(47, 47, 47, 0.1);
+    z-index: 1;
+}
+
+.mobile-nav .dropdown-content{
+  position: static;
+  background-color: inherit;
+  min-width: inherit;
+  box-shadow: 0px 0px 0px 0px #000000;
+}
+
+.dropdown-content a {
+    color: #5333ed;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {background-color: inherit;}
+
+.mobile-nav .dropdown-content a:hover {background-color: none;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: inherit;
+}
+
+</style>
+<div class='container hero-menu'>
+    <div class='row'>
+        <div class='col-xs-12 pt--50 pt--md--30 pt--xs--30'>
+            <div id='site-menu-outer-container'>
+                <div class='site-menu-container' id='site-menu'>
+                    <div class='site-menu'>
+                        <div class='site-menu__logo'>
+                            <a href='https://eta-lang.org'>
+                              <img alt='Eta Logo' src='/images/eta-logo.svg' src='/images/eta-logo.svg' style='height: 20px;' />
+                            </a>
+                        </div>
+                        <input type='checkbox' id='hamburger-menu-trigger' />
+                        <nav class='site-menu__nav'>
+                            <ul>
+                                <li>
+                                    <a class='active ' href='/'><span>Home</span></a>
+                                </li>
+                                <li>
+                                    <div class='dropdown'>
+                                        <button class='dropbtn active'>Documentation
+                                        <img src='/images/arrow-down.svg' height='10px;' />
+                                        </button>
+                                        <div class='dropdown-content dropdown-hide'>
+                                            <a href='/docs/'>Docs Home</a>
+                                            <a href='/docs/user-guides'>User Guides</a>
+                                            <a href='/docs/tutorials'>Tutorials</a>
+                                            <a href='/docs/cheatsheets'>Cheatsheets</a>
+                                            <a href='/docs/faq'>FAQ</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='dropdown'>
+                                        <button class='dropbtn active'>Community
+                                          <img src='/images/arrow-down.svg' height='10px;' />
+                                        </button>
+                                        <div class='dropdown-content dropdown-hide'>
+                                            <a href='/community'>Community Home</a>
+                                            <a href='/contribute'>Contribute</a>
+                                            <a href='/contribute/proposals'>Proposals</a>
+                                            <a href='/contribute/bug-report'>Bug Reports</a>
+                                            <a href='/contribute/gsoc/2018'>GSoC 2018</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a class=' ' href='https://tour.eta-lang.org/'><span>Tour of Eta</span></a>
+                                </li>
+                                <li>
+                                    <a class=' ' href='https://blog.eta-lang.org'><span>Blog</span></a>
+                                </li>
+                                <li>
+                                    <a class=' ' href='https://github.com/typelead/eta' target='_blank'><span>GitHub</span></a>
+                                </li>
+                                <li>
+                                    <a class='login' href='/docs/user-guides/eta-user-guide/installation/methods'><span>Install</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <label for='hamburger-menu-trigger' class='show-xs-only'>
+                        <svg class style=' ' width='24' height='24' viewBox='0 0 24 24'><g fill-rule='nonzero' fill='white'><path d='M24 4.5c0 .825-.675 1.5-1.5 1.5h-21C.675 6 0 5.325 0 4.5S.675 3 1.5 3h21c.825 0 1.5.675 1.5 1.5zM24 12c0 .825-.675 1.5-1.5 1.5h-21C.675 13.5 0 12.825 0 12s.675-1.5 1.5-1.5h21c.825 0 1.5.675 1.5 1.5zM24 19.5c0 .825-.675 1.5-1.5 1.5h-21C.675 21 0 20.325 0 19.5S.675 18 1.5 18h21c.825 0 1.5.675 1.5 1.5z'></path></g></svg>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-xs-12 pb--80'>
+
+                <!-- # Post Content -->
+                <div class='post-4664 page type-page status-publish hentry'>
+
+                    <h1 class='heading--huge color--purple mt--40'>Legal – Privacy</h1>
+                    <div class='mt--10 text--small opacity--60'>
+                        Written on August 23, 2017. Updated on: January 16, 2017 </div>
+
+                    <div class='user-content mt--40'>
+                        <p>We track data about users of the Eta website, the Eta compiler, the Etlas build tool, and any other services we may offer from time to time.</p>
+
+                        <p>This page tells you what we track, and what we do with it.</p>
+
+                        <h2>The Eta Compiler</h2>
+                        <p>All invocations of the Eta compiler store metrics, but the compiler itself does not send these metrics to an external server. That function is performed by the Etlas build tool, detailed in the following section.</p>
+                        <p>For example, this is a sample payload of metrics stored by the Eta compiler:</p>
+
+                        <pre style='background: #2E3037; color: white;'>{"startTime": "2017-07-20T20:02:00.164452Z","mode": 0,"endTime": "2017-07-20T20:02:08.721724Z"}</pre>
+
+                        <p>This includes:</p>
+                        <ul>
+                            <li>The start time of the compiler invocation</li>
+                            <li>The mode of compilation, e.g., one shot or batch.</li>
+                            <li>The end time of the compiler invocation.</li>
+                        </ul>
+                        <h2>The Etlas Build Tool</h2>
+
+                        <p>The Etlas build tool does not track metrics of its own and sends the metrics stored by the Eta compiler along with a uniquely identifier for the user’s system to the Eta telemetry server, only if the user had decided to opt-in - a preference stored in the user’s Etlas config file. All the requests to the telemetry server are logged and retained by TypeLead, Inc.</p>
+
+                        <p>This is a sample of the request log stored on the telemetry server, sent by the Etlas build tool:</p>
+
+                        <pre style='background: #2E3037; color: white;'>91.230.47.3 - - [24/07/2017:02:25:07 +0000] "GET /metrics-api HTTP/1.1" 200 - "" "etlas/1.0.1.0 (osx; x86_64)"</pre>
+
+                        <p>This includes:</p>
+
+                        <ul>
+                            <li>The IP address of the requestor.</li>
+                            <li>The date and time of the request.</li>
+                            <li>The HTTP request URL and method.</li>
+                            <li>The HTTP protocol version.</li>
+                            <li>The HTTP response status code.</li>
+                            <li>The length (in bytes) of the response that is sent back.</li>
+                            <li>A Referrer header.</li>
+                            <li>The User Agent header, which includes the Etlas version.</li>
+                        </ul>
+
+                        <p>The Etlas build tool also queries a binary package server and decides whether to install a given package in binary form or compile from source. All the requests to the binary package server are logged and retained by TypeLead, Inc.</p>
+
+                        <p>This is a sample of the request log stored on the binary package server, sent by the Etlas build tool:</p>
+
+                        <pre style='background: #2E3037; color: white;'>91.230.47.3 - - [20/07/2017:15:45:35 +0000] "GET /index HTTP/1.1" 304 290 "-" "etlas/1.0.1.0 (osx; x86_64)"</pre>
+
+                        <p>This includes the same details as listed above, since the format is exactly the same.</p>
+
+                        <h2>The Eta Website</h2>
+
+                        <p>Like most website operators, TypeLead, Inc. collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. TypeLead, Inc.’s purpose in collecting non-personally identifying information is to better understand how the visitors of the Eta website use the website. From time to time, TypeLead, Inc. may release non-personally-identifying information in the aggregate, e.g., by publishing a report on trends in website usage.</p>
+
+                        <p>TypeLead, Inc. also collects potentially personally-identifying information like Internet Protocol (IP) addresses. TypeLead, Inc. does not use such information to identify its visitors, however, and does not disclose such information, other than under the same circumstances that it uses and discloses personally-identifying information, as described below.</p>
+
+                        <p>The Eta website uses Google Analytics to monitor and analyze user behavior. This service provides TypeLead, Inc. with information on users’ demographics, age, location, and interest categories, when such information is available. This information is not used to identify individual users, but can in some cases be very specific. You can learn more about the information gathered and retained by this service at the
+                            <a href='https://support.google.com/analytics/answer/2700409?hl=en&utm_id=ad'>Google Analytics privacy policy</a>. You can opt out of Google Analytics entirely with the <a href='https://support.google.com/analytics/answer/181881?hl=en&ref_topic=2919631'>Google Analytics opt-out browser addon.</a></p>
+
+                        <h2>Tour of Eta</h2>
+
+                        <p>In order to access the tour you need to sign in. You can either Sign In with GitHub or Twitter.</p>
+
+                        <p>When granting the Tour access, we request the following capabalities.</p>
+
+                        <ul>
+                            <li>Read Email: This is notify you with future versions and updates of the Tour of Eta.</li>
+                            <li>Full Name and User Name: This is to create your account on the Tour of Eta.</li>
+                            <li>Avatar: This is to create the avatar on the Tour of Eta account.</li>
+                        </ul>
+                        <p>You can opt-out of the Tour of Eta any time by Signing out.</p>
+
+                        <h2>Collection of Personally Identifying Information</h2>
+
+                        <p>In order to write information into the Eta telemetry server, users may decide to provide certain personally identifying information including but not limited to: email address, username, password, personal website, and account names on other services such as GitHub, Twitter, and IRC.</p>
+
+                        <p>If users do not want their information tracked in this manner, they can opt out by following the instructions here. However, this means that some features of the Eta website will be unavailable to them.</p>
+
+                        <h2>Use of Personally Identifying Information</h2>
+
+                        <p>We may use personally identifying information we have collected about you, including your email address, to provide you with news, notes, and recommendations. You can opt out of receiving such messages at any time by using the “unsubscribe” links or directions at the ends of messages you receive. In addition, we use collected personally identifying information to operate our business and the Eta service. We do not disclose your personal information to unaffiliated third parties who may want to offer you their own products and services unless you have requested or authorized us to do so.</p>
+
+                        <p>We may share your personal information with third parties or affiliates where it is necessary for us to complete a transaction or do something you have asked us to do. Likewise, we may share your personal information with third parties or affiliates with whom we have contracted to perform services on our behalf. Companies that act on our behalf are required to keep the personal information we provide to them confidential and to use the personal information we share only to provide the services we ask them to perform.</p>
+
+                        <p>In addition, we may disclose personal information in the good faith belief that we are lawfully authorized to do so, or that doing so is reasonably necessary to comply with legal process or authorities, respond to any claims, or to protect the rights, property , or personal safety of TypeLead Inc., our users, our employees, or the public. In addition, information about our users, including personal information, may be disclosed or transferred as part of, or during negotiations of, any merger, sale of company assets, or acquisition.</p>
+
+                        <h2>Cookies</h2>
+
+                        <p>A cookie is a string of information that a website stores on a visitor’s computer, and that the visitor’s browser provides to the website each time the visitor returns.</p>
+
+                        <p>The Eta website uses cookies to help identify and track visitors, their usage of the Eta website, and their website access credentials. Eta website visitors who do not wish to have cookies placed on their computers should set their browsers to refuse cookies before using TypeLead, Inc.’s websites, with the drawback that certain features of TypeLead, Inc.’s websites may not function properly without the aid of cookies.</p>
+
+                        <h2>Disclosure of Log Information</h2>
+
+                        <p>All user information is retained in raw form for such time as deemed appropriate by TypeLead, Inc. It is shared with employees and contractors of TypeLead, Inc., as needed to process information on TypeLead, Inc.’s behalf.</p>
+
+                        <p>Raw log data is not shared with third parties, but may be shared in aggregate. For example, we may share the number of active Eta users in a given day, and occasionally TypeLead, Inc. may publish blog posts or reports on the Eta compiler or Eta website usage.</p>
+
+                        <p>We also analyze log data for a variety of reasons, including counting up downloads and unique visitors, debugging production problems, tracking which versions of Eta and Etlas are in use in the wild, and researching how Eta packages are used together with one another. This helps us to better understand the usage patterns of Eta, and make better decisions about the evolving Eta in the future.</p>
+
+                        <h2>Use by Minors</h2>
+
+                        <p>We will refer to the Eta website, Etlas build tool (when opted-in for telemetry), and other related services as the “Eta services.” Eta services are not intended for use by minor children (under the age of 18). Parents and guardians should monitor the use of the Eta service by minor children. Children under age 13 should not use Eta services at all. If a child under age 13 submits personal information through any part of the service, and we become aware that the person submitting the information is under age 13, we will attempt to delete the information as soon as reasonably possible.</p>
+
+                        <h2>Links to Other Websites</h2>
+
+                        <p>The Eta website may contain links to other websites. Any personal information you provide on the linked pages is provided directly to that third party and is subject to that third party’s privacy policy. Except as described above, we are not responsible for the content or privacy and security practices and policies of websites to which we link. Links from the Eta service to third parties or to other sites are provided for your convenience. We encourage you to learn about their privacy and security practices and policies before providing them with personal information.</p>
+
+                        <h2>United States Jurisdiction</h2>
+
+                        <p>The Eta website and related services are hosted in the United States. This Privacy Policy is intended to comply with privacy laws in the United States and may not comply with all privacy laws in other countries.</p>
+
+                        <p>If you are a non-US user of the service, by using our service and providing us with data, you acknowledge, agree and provide your consent that your personal information may be processed in the United States for the purposes identified in this Privacy Policy. In addition, such data may be stored on servers located outside your resident jurisdiction, which may have less stringent privacy practices than your own. By using the supporting Eta services and providing us with your data, you consent to the transfer of such data and any less stringent privacy practices.</p>
+
+                        <h2>Contact Information</h2>
+
+                        <p>If you have any questions or concerns about how we track user information, or how that information is used, please contact us at once.</p>
+
+                        <p>You may contact TypeLead, Inc. by emailing <a href='mailto:contact@typelead.com' target='_top'>contact@typelead.com.</a></p>
+
+                        <h2>Privacy Policy Changes</h2>
+
+                        <p>Although most changes are likely to be minor, TypeLead, Inc. may change its Privacy Policy from time to time, and in TypeLead, Inc.’s sole discretion. Any such changes will be posted on the Eta blog, and the detailed history of changes can be found in the <a href='https://github.com/typelead/eta/commits/master/docs/source/privacy-policy.rst'>git repository history for this document.</a></p>
+
+                        <p>TypeLead, Inc. encourages visitors to frequently check this page for any changes to its Privacy Policy. Your continued use of the Eta website, the Etlas build tool (if already opted-in), and any supporting services after any change in this Privacy Policy will constitute your acceptance of such change.</p>
+
+                        <h2>License</h2>
+
+                        <p>This document may be reused under a <a href='https://creativecommons.org/licenses/by-sa/4.0/'>Creative Commons Attribution-ShareAlike License.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='site-footer bg--blue color--white pt--110 pb--110 pt--sm--40 pb--sm--60'>
+    <div class='container'>
+        <div class='row around-xs'>
+            <div class='col-xs-12 col-sm-5 col-md-2 mt--md--40'>
+                <h4 class='heading--small'><a href='/docs/'>Documentation</a></h4>
+                <ul>
+                    <li>
+                        <a href='/docs/user-guides'>User Guides</a>
+                    </li>
+                    <li>
+                        <a href='/docs/tutorials'>Eta Tutorials</a>
+                    </li>
+                    <li>
+                        <a href='/docs/cheatsheets'>Cheatsheet</a>
+                    </li>
+                    <li>
+                        <a href='/docs/faq'>FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class='col-xs-12 col-sm-5 col-md-2 mt--md--40'>
+                <h4 class='heading--small'><a href='/docs/tutorials'>Tutorials</a></h4>
+                <ul>
+                    <li>
+                        <a href='/docs/tutorials/web-services/overview'>Web Server</a>
+                    </li>
+                    <li>
+                        <a href='/docs/tutorials/from-loops-to-recursion/loops'>Loops to Recursion</a>
+                    </li>
+                </ul>
+            </div>
+            <div class='col-xs-12 col-sm-5 col-md-2 mt--md--40'>
+                <h4 class='heading--small'><a href='/community'>Community</a></h4>
+                <ul>
+                    <li>
+                        <a href='https://gitter.im/typelead/eta'>Gitter</a>
+                    </li>
+                    <li>
+                        <a href='https://groups.google.com/forum/#!forum/eta-discuss'>Mailing List</a>
+                    </li>
+
+                    <li>
+                        <a href='https://slack.eta-lang.org/'>Slack</a>
+                    </li>
+                    <li>
+                        <a href='https://kiwiirc.com/client/irc.freenode.net/#eta-lang'>IRC</a>
+                    </li>
+                </ul>
+            </div>
+            <div class='col-xs-12 col-sm-5 col-md-2 mt--md--40'>
+                <h4 class='heading--small'><a href='https://eta-lang.org'>Eta</a></h4>
+                <ul>
+                    <li>
+                        <a href='https://blog.eta-lang.org/'>Blog</a>
+                    </li>
+                    <li>
+                        <a href='/changelog'>ChangeLog</a>
+                    </li>
+                    <li>
+                        <a href='https://tour.eta-lang.org'>Tour of Eta</a>
+                    </li>
+                </ul>
+            </div>
+            <div class='col-xs-12 col-sm-5 col-md-2 mt--md--40'>
+                <h4 class='heading--small'><a href='/docs/user-guides/eta-user-guide/installation/methods'>Installation</a></h4>
+                <ul>
+                    <li>
+                        <a href='/docs/user-guides/eta-user-guide/installation/gradle'>Gradle</a>
+                    </li>
+                    <li>
+                        <a href='/docs/user-guides/eta-user-guide/installation/etlas'>Etlas</a>
+                    </li>
+                    <li>
+                        <a href='/docs/user-guides/eta-user-guide/installation/docker'>Docker</a>
+                    </li>
+                    <li>
+                        <a href='/docs/user-guides/eta-user-guide/installation/source'>Source</a>
+                    </li>
+                    <li>
+                        <a href='/docs/user-guides/eta-user-guide/installation/nix'>Nix</a>
+                    </li>
+                </ul>
+            </div>
+            <div class='col-xs-12 col-sm-5 col-md-2 mt--md--40'>
+                <h4 class='heading--small'><a href='/contribute'>Contribute</a></h4>
+                <ul>
+                    <li>
+                        <a href='/contribute'>Eta Contribution</a>
+                    </li>
+                    <li>
+                        <a href='/contribute/bug-report'>Report an Issue</a>
+                    </li>
+                    <li>
+                        <a href='/contribute/proposals'>Eta Proposals</a>
+                    </li>
+                    <li>
+                        <a href='/contribute/gsoc/2018'>GSoC 2018</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='site-footer-bar bg bg--darkblue color--white pt--60 pb--60'>
+    <div class='container'>
+        <div class='site-footer-bar__social'>
+            <img alt='Eta Logo' src='/images/eta-logo.svg' style='height: 15px; padding-right: 20px;' />
+            <a class='mr--10' href='https://twitter.com/eta_lang' target='_blank'>
+                <svg class style=' ' width='24' height='24' viewBox='0 0 24 24'><path d='M18.27 7.85a2.86 2.86 0 0 0 1.29-1.66 6.06 6.06 0 0 1-1.94.74A3.22 3.22 0 0 0 15.4 6a3.07 3.07 0 0 0-3 3 1.37 1.37 0 0 0 .09.65 8.49 8.49 0 0 1-6.32-3.1 3.11 3.11 0 0 0 1 4.06 3.87 3.87 0 0 1-1.38-.37 3 3 0 0 0 2.4 3c-.18 0-.46.09-.74.09a1.17 1.17 0 0 1-.55-.09 3 3 0 0 0 2.86 2.12A5.87 5.87 0 0 1 6 16.62h-.75A8.92 8.92 0 0 0 9.59 18h.74a8.64 8.64 0 0 0 8.22-8.58V9A6 6 0 0 0 20 7.48c-.53.09-1.09.27-1.73.37zM12 24a12 12 0 1 1 12-12 12 12 0 0 1-12 12z' fill='white' data-name='figures and interactions'></path></svg>
+            </a>
+            <a class='mr--10' href='https://github.com/typelead' target='_blank'>
+              <svg width='24' height='24' viewBox='0 0 256 250' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' preserveAspectRatio='xMidYMid'>
+                <g> <path d='M128.00106,0 C57.3172926,0 0,57.3066942 0,128.00106 C0,184.555281 36.6761997,232.535542 87.534937,249.460899 C93.9320223,250.645779 96.280588,246.684165 96.280588,243.303333 C96.280588,240.251045 96.1618878,230.167899 96.106777,219.472176 C60.4967585,227.215235 52.9826207,204.369712 52.9826207,204.369712 C47.1599584,189.574598 38.770408,185.640538 38.770408,185.640538 C27.1568785,177.696113 39.6458206,177.859325 39.6458206,177.859325 C52.4993419,178.762293 59.267365,191.04987 59.267365,191.04987 C70.6837675,210.618423 89.2115753,204.961093 96.5158685,201.690482 C97.6647155,193.417512 100.981959,187.77078 104.642583,184.574357 C76.211799,181.33766 46.324819,170.362144 46.324819,121.315702 C46.324819,107.340889 51.3250588,95.9223682 59.5132437,86.9583937 C58.1842268,83.7344152 53.8029229,70.715562 60.7532354,53.0843636 C60.7532354,53.0843636 71.5019501,49.6441813 95.9626412,66.2049595 C106.172967,63.368876 117.123047,61.9465949 128.00106,61.8978432 C138.879073,61.9465949 149.837632,63.368876 160.067033,66.2049595 C184.49805,49.6441813 195.231926,53.0843636 195.231926,53.0843636 C202.199197,70.715562 197.815773,83.7344152 196.486756,86.9583937 C204.694018,95.9223682 209.660343,107.340889 209.660343,121.315702 C209.660343,170.478725 179.716133,181.303747 151.213281,184.472614 C155.80443,188.444828 159.895342,196.234518 159.895342,208.176593 C159.895342,225.303317 159.746968,239.087361 159.746968,243.303333 C159.746968,246.709601 162.05102,250.70089 168.53925,249.443941 C219.370432,232.499507 256,184.536204 256,128.00106 C256,57.3066942 198.691187,0 128.00106,0 Z M47.9405593,182.340212 C47.6586465,182.976105 46.6581745,183.166873 45.7467277,182.730227 C44.8183235,182.312656 44.2968914,181.445722 44.5978808,180.80771 C44.8734344,180.152739 45.876026,179.97045 46.8023103,180.409216 C47.7328342,180.826786 48.2627451,181.702199 47.9405593,182.340212 Z M54.2367892,187.958254 C53.6263318,188.524199 52.4329723,188.261363 51.6232682,187.366874 C50.7860088,186.474504 50.6291553,185.281144 51.2480912,184.70672 C51.8776254,184.140775 53.0349512,184.405731 53.8743302,185.298101 C54.7115892,186.201069 54.8748019,187.38595 54.2367892,187.958254 Z M58.5562413,195.146347 C57.7719732,195.691096 56.4895886,195.180261 55.6968417,194.042013 C54.9125733,192.903764 54.9125733,191.538713 55.713799,190.991845 C56.5086651,190.444977 57.7719732,190.936735 58.5753181,192.066505 C59.3574669,193.22383 59.3574669,194.58888 58.5562413,195.146347 Z M65.8613592,203.471174 C65.1597571,204.244846 63.6654083,204.03712 62.5716717,202.981538 C61.4524999,201.94927 61.1409122,200.484596 61.8446341,199.710926 C62.5547146,198.935137 64.0575422,199.15346 65.1597571,200.200564 C66.2704506,201.230712 66.6095936,202.705984 65.8613592,203.471174 Z M75.3025151,206.281542 C74.9930474,207.284134 73.553809,207.739857 72.1039724,207.313809 C70.6562556,206.875043 69.7087748,205.700761 70.0012857,204.687571 C70.302275,203.678621 71.7478721,203.20382 73.2083069,203.659543 C74.6539041,204.09619 75.6035048,205.261994 75.3025151,206.281542 Z M86.046947,207.473627 C86.0829806,208.529209 84.8535871,209.404622 83.3316829,209.4237 C81.8013,209.457614 80.563428,208.603398 80.5464708,207.564772 C80.5464708,206.498591 81.7483088,205.631657 83.2786917,205.606221 C84.8005962,205.576546 86.046947,206.424403 86.046947,207.473627 Z M96.6021471,207.069023 C96.7844366,208.099171 95.7267341,209.156872 94.215428,209.438785 C92.7295577,209.710099 91.3539086,209.074206 91.1652603,208.052538 C90.9808515,206.996955 92.0576306,205.939253 93.5413813,205.66582 C95.054807,205.402984 96.4092596,206.021919 96.6021471,207.069023 Z' fill='#ffffff'></path> </g>
+              </svg>
+            </a>
+            <a class='mr--10' href='https://www.facebook.com/etalanguage/' target='_blank'>
+                <svg class style=' ' width='24' height='24' viewBox='0 0 24 24'><path d='M13.17 7.95a.47.47 0 0 1 .49-.49h2v-3h-3.47A2.44 2.44 0 0 0 9.73 7v3H8.25v3h1.48v7.38h3.45v-7.51h2l.49-3h-2.5zM12 24a12 12 0 1 1 12-12 12 12 0 0 1-12 12z' fill='white' data-name='figures and interactions'></path> </svg>
+            </a>
+        </div>
+        <div class='site-footer-bar__legal text--small'>
+            <span>Copyright © <a href='http://typelead.com' target='_blank'>TypeLead, Inc.</a> All rights reserved.</span>
+            <span> <a href='/legal' target='_blank'> Legal information          </a> </span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>
+                Made with  <img alt='Made with Love' src='/images/love.svg' style='height: 15px; padding: 0px 2px; padding-top: 2px;' /> by
+              <a href='https://twitter.com/jyothsnasrin' target='_blank' style='color: #2cd4d9; opacity: 1;'>
+                   Jyothsna Patnam</a>
+            </span>
+        </div>
+    </div>
+</div>
+
+    <style>
+    div#site-menu-outer-container{
+      height: 64px;
+    }
+    </style>
+    <script type='text/javascript' src='/js/scripts/jquery.accordion.js'></script>
+    <script type='text/javascript' src='/js/scripts/smoothscroll.js'></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-89651019-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

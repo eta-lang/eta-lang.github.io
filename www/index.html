@@ -1,0 +1,911 @@
+<html lang='en-US'>
+
+<head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1' />
+    <meta name='pinterest' content='nopin' />
+    <title>Eta Programming Language - Haskell on the JVM</title>
+    <meta name='keywords' content='Eta, Haskell, Scala, Clojure, JVM, Functional Programming, Functional Programming on the JVM, Java Virtual Machine' />
+    <meta name='description' content='Eta is a simple, compact and powerful programming language to build scalable systems on the JVM. It is a dialect of Haskell on the JVM.' />
+    <link rel='canonical' href='https://eta-lang.org' />
+    <link rel='apple-touch-icon' sizes='57x57' href='favicon/apple-icon-57x57.png' />
+    <link rel='apple-touch-icon' sizes='60x60' href='favicon/apple-icon-60x60.png' />
+    <link rel='apple-touch-icon' sizes='72x72' href='favicon/apple-icon-72x72.png' />
+    <link rel='apple-touch-icon' sizes='76x76' href='favicon/apple-icon-76x76.png' />
+    <link rel='apple-touch-icon' sizes='114x114' href='favicon/apple-icon-114x114.png' />
+    <link rel='apple-touch-icon' sizes='120x120' href='favicon/apple-icon-120x120.png' />
+    <link rel='apple-touch-icon' sizes='144x144' href='favicon/apple-icon-144x144.png' />
+    <link rel='apple-touch-icon' sizes='152x152' href='favicon/apple-icon-152x152.png' />
+    <link rel='apple-touch-icon' sizes='180x180' href='favicon/apple-icon-180x180.png' />
+    <link rel='icon' type='image/png' sizes='192x192' href='favicon/android-icon-192x192.png' />
+    <link rel='icon' type='image/png' sizes='32x32' href='favicon/favicon-32x32.png' />
+    <link rel='icon' type='image/png' sizes='96x96' href='favicon/favicon-96x96.png' />
+    <link rel='icon' type='image/png' sizes='16x16' href='favicon/favicon-16x16.png' />
+    <meta name='msapplication-TileColor' content='#ffffff' />
+    <meta name='msapplication-TileImage' content='/ms-icon-144x144.png' />
+    <meta name='theme-color' content='#ffffff' />
+    <meta property='og:locale' content='en_US' />
+    <meta property='og:type' content='website' />
+    <meta property='og:title' content='Eta Programming Language - Haskell on the JVM' />
+    <meta property='og:description' content='Eta is a simple, compact and powerful programming language to build scalable systems on the JVM. It is a dialect of Haskell on the JVM.' />
+    <meta property='og:url' content='https://eta-lang.org' />
+    <meta property='og:site_name' content='Eta Programming Language - Haskell on the JVM' />
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C300%2C400%2C700&ver=5a156049a2178' type='text/css' media='all' />
+    <link rel='stylesheet' id='jquery-slick-css' href='css/slick.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='jquery-slick-theme-css' href='css/slick-theme.css' type='text/css' media='all' />
+    <script type='text/javascript' src='js/jquery/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
+    <link rel='shortlink' href='https://eta-lang.org' />
+</head>
+
+<body class='home page-template-default page page-id-4723 object-4723'>
+    <div class='hero-container'>
+        <style>
+.dropbtn {
+    background-color: inherit;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 300;
+    border: none;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+}
+
+.mobile-nav .dropbtn{
+  font-size: 22px;
+  text-transform: none;
+  padding-left: 0px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 10px 40px 0px rgba(47, 47, 47, 0.1);
+    z-index: 1;
+}
+
+.mobile-nav .dropdown-content{
+  position: static;
+  background-color: inherit;
+  min-width: inherit;
+  box-shadow: 0px 0px 0px 0px #000000;
+}
+
+.dropdown-content a {
+    color: #5333ed;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {background-color: inherit;}
+
+.mobile-nav .dropdown-content a:hover {background-color: none;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: inherit;
+}
+
+</style>
+<div class='container hero-menu'>
+    <div class='row'>
+        <div class='col-xs-12 pt--50 pt--md--30 pt--xs--30'>
+            <div id='site-menu-outer-container'>
+                <div class='site-menu-container' id='site-menu'>
+                    <div class='site-menu'>
+                        <div class='site-menu__logo'>
+                            <a href='https://eta-lang.org'>
+                              <img alt='Eta Logo' src='/images/eta-logo.svg' src='/images/eta-logo.svg' style='height: 20px;' />
+                            </a>
+                        </div>
+                        <input type='checkbox' id='hamburger-menu-trigger' />
+                        <nav class='site-menu__nav'>
+                            <ul>
+                                <li>
+                                    <a class='active ' href='/'><span>Home</span></a>
+                                </li>
+                                <li>
+                                    <div class='dropdown'>
+                                        <button class='dropbtn active'>Documentation
+                                        <img src='/images/arrow-down.svg' height='10px;' />
+                                        </button>
+                                        <div class='dropdown-content dropdown-hide'>
+                                            <a href='/docs/'>Docs Home</a>
+                                            <a href='/docs/user-guides'>User Guides</a>
+                                            <a href='/docs/tutorials'>Tutorials</a>
+                                            <a href='/docs/cheatsheets'>Cheatsheets</a>
+                                            <a href='/docs/faq'>FAQ</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='dropdown'>
+                                        <button class='dropbtn active'>Community
+                                          <img src='/images/arrow-down.svg' height='10px;' />
+                                        </button>
+                                        <div class='dropdown-content dropdown-hide'>
+                                            <a href='/community'>Community Home</a>
+                                            <a href='/contribute'>Contribute</a>
+                                            <a href='/contribute/proposals'>Proposals</a>
+                                            <a href='/contribute/bug-report'>Bug Reports</a>
+                                            <a href='/contribute/gsoc/2018'>GSoC 2018</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a class=' ' href='https://tour.eta-lang.org/'><span>Tour of Eta</span></a>
+                                </li>
+                                <li>
+                                    <a class=' ' href='https://blog.eta-lang.org'><span>Blog</span></a>
+                                </li>
+                                <li>
+                                    <a class=' ' href='https://github.com/typelead/eta' target='_blank'><span>GitHub</span></a>
+                                </li>
+                                <li>
+                                    <a class='login' href='/docs/user-guides/eta-user-guide/installation/methods'><span>Install</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <label for='hamburger-menu-trigger' class='show-xs-only'>
+                        <svg class style=' ' width='24' height='24' viewBox='0 0 24 24'><g fill-rule='nonzero' fill='white'><path d='M24 4.5c0 .825-.675 1.5-1.5 1.5h-21C.675 6 0 5.325 0 4.5S.675 3 1.5 3h21c.825 0 1.5.675 1.5 1.5zM24 12c0 .825-.675 1.5-1.5 1.5h-21C.675 13.5 0 12.825 0 12s.675-1.5 1.5-1.5h21c.825 0 1.5.675 1.5 1.5zM24 19.5c0 .825-.675 1.5-1.5 1.5h-21C.675 21 0 20.325 0 19.5S.675 18 1.5 18h21c.825 0 1.5.675 1.5 1.5z'></path></g></svg>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class='container hero-content'>
+            <div class='row'>
+                <div class='col-xs-12 col-sm-6 mb--xs--60 mt--xs--20 color--white'>
+                    <h1 class='heading--large'>Meet Eta.</h1>
+                    <p class='text--large mt--20'>
+                      A powerful programming language to build concurrent & distributed systems on the JVM.
+                    </p>
+                    <a class='button--purple mt--40 mb--sm--40 mb--xs--0' href='/docs/user-guides/eta-user-guide/introduction/what-is-eta'>
+                      Getting Started
+                    </a>
+                </div>
+                <div class='col-xs-12 col-lg-1 center-xs color--white responsive'>
+                    <h1 class='java-text'>jvm</h1>
+                </div>
+                <div class='col-xs-12 col-lg-1 color--white responsive'>
+                    <span class='tcon-indicator' aria-label='scroll' aria-hidden='true' style='transform: rotate(45); padding: 100px'>
+          <svg version='1.1' xmlns='http://www.w3.org/2000/svg' class='tcon-svgchevron' viewBox='0 0 40 46' transform='rotate(45)'>
+            <path class='a3' d='M0,0l15,16L30,0'></path>
+            <path class='a2' d='M0,10l15,16l15-16'></path>
+            <path class='a1' d='M0,20l15,16l15-16'></path>
+          </svg>
+        </span>
+                </div>
+                <div class='col-xs-12 col-lg-1 center-xs color--white responsive'>
+                    <h1 class='eta-text'>eta</h1>
+                </div>
+                <div class='col-xs-12 col-lg-1 color--white responsive'>
+                    <span class='tcon-indicator' aria-label='scroll' aria-hidden='true' style='transform: rotate(45); padding: 100px'>
+          <svg version='1.1' xmlns='http://www.w3.org/2000/svg' class='tcon-svgchevron' id='svg2' viewBox='0 0 40 46' transform='rotate(45)'>
+            <path class='a3' d='M0,0l15,16L30,0'></path>
+            <path class='a2' d='M0,10l15,16l15-16'></path>
+            <path class='a1' d='M0,20l15,16l15-16'></path>
+          </svg>
+        </span>
+                </div>
+                <div class='col-xs-12 col-lg-1 center-xs color--white responsive'>
+                    <h1 class='haskell-text'>haskell</h1>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- / Hero Section -->
+
+    <!-- Features Block -->
+    <div class='container pull--100'>
+        <div class='box'>
+            <div class='row middle-xs'>
+
+                <!-- Title -->
+                <div class='col-xs-12'>
+                    <h2 class='heading--large'> What is Eta?</h2>
+                    <p class='text--large mt--10'>
+                        Eta is a pure, lazy, strongly typed functional programming language on the JVM. It brings two big ecosystems, the JVM and Haskell, together. This allows you to harness the best of both ecosystems to build your applications quickly and effectively. Eta's concurrency support helps you to build highly scalable systems.</p>
+                </div>
+                <!-- / Title -->
+            </div>
+        </div>
+    </div>
+    <!-- / Features Block -->
+
+    <!-- Values Block -->
+    <div class='container'>
+
+        <!-- Title -->
+        <div class='row center-xs'>
+            <div class='col-xs-12 pt--100 pt--xs--80 mb--40 mb--xs--0'>
+                <h2 class='heading--large'> Why Eta? </h2>
+            </div>
+        </div>
+        <div class='row gutter--large center-xs'>
+            <div class='col-xs-12 col-sm-4'>
+                <div class='bodymovin'>
+                    <img alt='Interop' src='images/interop.svg' style='width:100px' />
+                </div>
+                <h3 class='heading--small mt--20 mb--10'> Robust Interoperability </h3>
+
+                <p>
+                  Eta has a strongly-typed Foreign Function Interface (FFI) that allows you to safely interoperate with Java.
+                </p>
+            </div>
+            <div class='col-xs-12 col-sm-4'>
+
+                <div class='bodymovin'>
+                    <img alt='Typesafe' src='images/types.svg' style='width:100px;' />
+                </div>
+
+                <h3 class='heading--small mt--20 mb--10'> Ultra Type Safety</h3>
+                <p>
+                  Eta has global type inference, giving you a dynamic language experience, but with a strong typing hidden underneath.
+                </p>
+            </div>
+            <div class='col-xs-12 col-sm-4 mt--xs--60'>
+
+                <div class='bodymovin' id='test'>
+                    <img alt='Concurrency' src='images/concurrent.svg' style='width:100px;' />
+                </div>
+
+                <h3 class='heading--small mt--20 mb--10'> Scalable Concurrency Support </h3>
+                <p>
+                  Eta offers a wide range of strategies for handling concurrency including Software Transaction Memory (STM), MVars, and Fibers.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class='bg--gray bg--slant--bottom bg--slant--top mt--100' style='min-height:610px'>
+        <div class='container pb--60 pt--60 pt--xs--20 pt--md--20'>
+            <div class='row'>
+                <div class='col-xs-12 col-lg-5'>
+                    <h2 class='heading--large mb--40'>Let's Build<br />a Web Service!</h2>
+                    <div class='screen' id='eta-screen'>
+                        <img class='screen__image' height='420' src='images/eta-editor.svg' srcset='images/eta-editor.svg' />
+                        <img class='screen__image' height='420' style='display:none' src='images/eta-editor1.svg' srcset='images/eta-editor1.svg' />
+                        <img class='screen__image' height='420' style='display:none' src='images/eta-editor2.svg' srcset='images/eta-editor2.svg' />
+                    </div>
+                    <div class='accordion mt--40' data-state='open'>
+                        <input id='my-eta-dashboard' type='radio' name='myeta-accordian' checked='checked' />
+                        <h3 class='accordion__title heading heading--small' onClick='switchImage(0)'>
+                            <label for='my-eta-dashboard'> Step 1  </label>
+                        </h3>
+                        <div class='accordion__content'>
+                            Using the powerful and type-safe Servant web framework, we define our API as a type and the handler types for each endpoint are automatically generated and conversions happen automatically.</div>
+                    </div>
+                    <div class='accordion mt--30'>
+                        <input id='myeta-analytics' type='radio' name='myeta-accordian' />
+                        <h3 class='accordion__title heading heading--small' onClick='switchImage(1)'>
+                            <label for='myeta-analytics'> Step 2</label>
+                        </h3>
+                        <div class='accordion__content'>
+                            Run the server. Etlas will make sure the dependencies are properly included on the JVM classpath.</div>
+                    </div>
+
+                    <div class='accordion mt--30'>
+                        <input id='myeta-powerful' type='radio' name='myeta-accordian' />
+                        <h3 class='accordion__title heading heading--small' onClick='switchImage(2)'>
+                            <label for='myeta-powerful'> Step 3   </label>
+                        </h3>
+                        <div class='accordion__content'>
+                            Consume your webservice using your browser or CURL. Want to dig in more? Check the full web service tutorial <a href='/docs/tutorials/web-services/overview'>here</a>.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='container mt--60 mb--100'>
+        <div class='row'>
+            <div class='col-xs-12 center-xs'>
+                <h2 class='heading heading--large mb--20'>Get Involved</h2>
+            </div>
+        </div>
+        <div class='row around-xs middle-xs center-xs logos logos--faded-color-on-hover' style='padding-top:60px;'>
+            <div class='col-xs-12 col-sm-4 mb--xs--40'>
+                <a href='https://gitter.im/typelead/eta' target='_blank'>
+                    <img alt='Gitter logo' src='images/gitter.svg' />
+                    <p class='heading--small color--eta mt--20'>Gitter</p>
+                </a>
+            </div>
+
+            <div class='col-xs-12 col-sm-4 mb--xs--40'>
+                <a href='https://slack.eta-lang.org' target='_blank'>
+                    <img alt='Slack logo' src='images/slack.svg' />
+                    <p class='heading--small color--eta mt--20'>Slack</p>
+                </a>
+            </div>
+
+            <div class='col-xs-12 col-sm-4 mb--xs--40'>
+                <a href='https://twitter.com/eta_lang' target='_blank'>
+                    <img alt='Twitter logo' src='images/twitter.svg' />
+                    <p class='heading--small color--eta mt--20'>Twitter</p>
+                </a>
+            </div>
+
+        </div>
+        <div class='row around-xs middle-xs center-xs logos mt--40 logos--faded-color-on-hover'>
+
+            <div class='col-xs-12 col-sm-4 mb--xs--40'>
+                <a href='https://kiwiirc.com/client/irc.freenode.net/#eta-lang' target='_blank'>
+                    <img alt='IRC logo' src='/images/irc.svg' width='100px;' />
+                    <p class='heading--small color--eta mt--40'>IRC</p>
+                </a>
+            </div>
+
+            <div class='col-xs-12 col-sm-4 mb--xs--40'>
+                <a href='https://stackoverflow.com/search?q=eta-lang' target='_blank'>
+                    <img alt='StackOverflow logo' src='/images/sof.svg' />
+                    <p class='heading--small color--eta mt--20'>StackOverflow</p>
+                </a>
+            </div>
+
+            <div class='col-xs-12 col-sm-4'>
+                <a href='https://groups.google.com/forum/#!forum/eta-discuss' target='_blank'>
+                    <img alt='Mailing List logo' src='/images/mailing.svg' />
+                    <p class='color--eta heading--small mt--20'>Mailing list</p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <div class='bg--blue color--white pt--80 pb--60'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-xs-12 center-xs'>
+                    <h2 class='heading--large mb--60'>Coming Soon</h2>
+                </div>
+            </div>
+            <div class='row plans position--relative'>
+                <div class='col-xs-12 col-sm-6 col-md-3 nopadding plan-box-container'>
+                    <div class='plan-box plan plan-box--active--color--white'>
+                        <div class='plan-box__price color--green'>
+                            <div class='plan-box__price--month price--month'>
+                                <span class='plan-box__amount'>Eta IntelliJ</span>
+                            </div>
+                        </div>
+                        <p class='plan-box__details'>
+                            Eta plugin for IntelliJ IDEA
+                        </p>
+                    </div>
+                </div>
+                <div class='col-xs-12 col-sm-6 col-md-3 nopadding plan-box-container'>
+                    <div class='plan-box plan plan-box--active--color--white'>
+                        <div class='plan-box__price color--green'>
+                            <div class='plan-box__price--month price--month'>
+                                <span class='plan-box__amount'>Eta FFI</span>
+                            </div>
+                        </div>
+                        <p class='plan-box__details'>
+                            Java FFI Bindings Generator
+                        </p>
+                    </div>
+                </div>
+                <div class='col-xs-12 col-sm-6 col-md-3 nopadding plan-box-container'>
+                    <div class='plan-box plan plan-box--active--color--white'>
+                        <div class='plan-box__price color--green'>
+                            <div class='plan-box__price--month price--month'>
+                                <span class='plan-box__amount'>Eta on Android</span>
+                            </div>
+                        </div>
+                        <p class='plan-box__details'>
+                            Write Android Apps with Eta
+                        </p>
+                    </div>
+                </div>
+                <div class='col-xs-12 col-sm-6 col-md-3 nopadding plan-box-container'>
+                    <div class='plan-box plan plan-box--active--color--white'>
+                        <div class='plan-box__price color--green'>
+                            <div class='plan-box__price--month price--month'>
+                                <span class='plan-box__amount'>Eta Fibers</span>
+                            </div>
+                        </div>
+                        <p class='plan-box__details'>
+                          Lightweight, Cooperative Threads
+                        </p>
+                    </div>
+                </div>
+                <div class='plan-box--floating-bg'></div>
+            </div>
+        </div>
+    </div>
+    <div class='bg bg--gray bg--slant--bottom'>
+        <div class='container pt--60 pb--60'>
+            <div class='row'>
+                <div class='col-xs-12 center-xs'>
+                    <h2 class='heading--large mb--50'>Twitter Feed</h2>
+                </div>
+            </div>
+            <div class='row between-xs center-xs'>
+                <div class='col-xs-12 center-xs'>
+                    <div class='post-14490 client_quotes type-client_quotes status-publish hentry'>
+                        <a class='twitter-timeline' data-dnt='true' href='https://twitter.com/search?q=%40eta_lang' data-widget-id='910665731016183808' data-tweet-limit='2' data-chrome='nofooter transparent noheader transparent noborders'>
+          Tweets about @eta_lang
+        </a>
+                        <script>
+                            ! function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0],
+                                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                                if (!d.getElementById(id)) {
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = p + "://platform.twitter.com/widgets.js";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }
+                            }(document, "script", "twitter-wjs");
+                        </script>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='container pt--20 pt--xs--60 pb--60'>
+        <div class='row'>
+            <div class='col-xs-12'>
+                <h2 class='heading--large mb--50 color--purple'> Conference Talks</h2>
+            </div>
+        </div>
+        <div class='row gutter--large'>
+            <div class='col-sm-4 col-xs-12 start-xs mt--xs--50 mt--first--0'>
+                <!-- <iframe width="300" height="158" src="https://youtu.be/Sc5xzyDWU64" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+                <iframe width='280' height='158' src='https://www.youtube.com/embed/Sc5xzyDWU64' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>
+
+                <p class='text--medium  mt--20 mb--20'>Beauty and the beast Haskell on JVM</p>
+                <h3 class='heading--small color--purple'>Lambda Days 2018</h3>
+            </div>
+            <div class='col-sm-4 col-xs-12 start-xs mt--xs--50 mt--first--0'>
+                <iframe width='280' height='158' src='https://www.youtube.com/embed/u9WACa-JRA4' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>
+                <p class='text--medium  mt--20 mb--20'>Operation Haskell + Scala</p>
+                <h3 class='heading--small color--purple'>ScalaMatsuri - 2018</h3>
+            </div>
+            <div class='col-sm-4 col-xs-12 start-xs mt--xs--50 mt--first--0'>
+                <iframe width='280' height='158' src='https://www.youtube.com/embed/ZuJg2cfmSmw' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>
+                <p class='text--medium  mt--20 mb--20'>Eta Fibers</p>
+                <h3 class='heading--small color--purple'>Functional Conf - 2017</h3>
+            </div>
+
+        </div>
+    </div>
+    <div class='site-footer bg--blue color--white pt--110 pb--110 pt--sm--40 pb--sm--60'>
+    <div class='container'>
+        <div class='row around-xs'>
+            <div class='col-xs-12 col-sm-5 col-md-2 mt--md--40'>
+                <h4 class='heading--small'><a href='/docs/'>Documentation</a></h4>
+                <ul>
+                    <li>
+                        <a href='/docs/user-guides'>User Guides</a>
+                    </li>
+                    <li>
+                        <a href='/docs/tutorials'>Eta Tutorials</a>
+                    </li>
+                    <li>
+                        <a href='/docs/cheatsheets'>Cheatsheet</a>
+                    </li>
+                    <li>
+                        <a href='/docs/faq'>FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class='col-xs-12 col-sm-5 col-md-2 mt--md--40'>
+                <h4 class='heading--small'><a href='/docs/tutorials'>Tutorials</a></h4>
+                <ul>
+                    <li>
+                        <a href='/docs/tutorials/web-services/overview'>Web Server</a>
+                    </li>
+                    <li>
+                        <a href='/docs/tutorials/from-loops-to-recursion/loops'>Loops to Recursion</a>
+                    </li>
+                </ul>
+            </div>
+            <div class='col-xs-12 col-sm-5 col-md-2 mt--md--40'>
+                <h4 class='heading--small'><a href='/community'>Community</a></h4>
+                <ul>
+                    <li>
+                        <a href='https://gitter.im/typelead/eta'>Gitter</a>
+                    </li>
+                    <li>
+                        <a href='https://groups.google.com/forum/#!forum/eta-discuss'>Mailing List</a>
+                    </li>
+
+                    <li>
+                        <a href='https://slack.eta-lang.org/'>Slack</a>
+                    </li>
+                    <li>
+                        <a href='https://kiwiirc.com/client/irc.freenode.net/#eta-lang'>IRC</a>
+                    </li>
+                </ul>
+            </div>
+            <div class='col-xs-12 col-sm-5 col-md-2 mt--md--40'>
+                <h4 class='heading--small'><a href='https://eta-lang.org'>Eta</a></h4>
+                <ul>
+                    <li>
+                        <a href='https://blog.eta-lang.org/'>Blog</a>
+                    </li>
+                    <li>
+                        <a href='/changelog'>ChangeLog</a>
+                    </li>
+                    <li>
+                        <a href='https://tour.eta-lang.org'>Tour of Eta</a>
+                    </li>
+                </ul>
+            </div>
+            <div class='col-xs-12 col-sm-5 col-md-2 mt--md--40'>
+                <h4 class='heading--small'><a href='/docs/user-guides/eta-user-guide/installation/methods'>Installation</a></h4>
+                <ul>
+                    <li>
+                        <a href='/docs/user-guides/eta-user-guide/installation/gradle'>Gradle</a>
+                    </li>
+                    <li>
+                        <a href='/docs/user-guides/eta-user-guide/installation/etlas'>Etlas</a>
+                    </li>
+                    <li>
+                        <a href='/docs/user-guides/eta-user-guide/installation/docker'>Docker</a>
+                    </li>
+                    <li>
+                        <a href='/docs/user-guides/eta-user-guide/installation/source'>Source</a>
+                    </li>
+                    <li>
+                        <a href='/docs/user-guides/eta-user-guide/installation/nix'>Nix</a>
+                    </li>
+                </ul>
+            </div>
+            <div class='col-xs-12 col-sm-5 col-md-2 mt--md--40'>
+                <h4 class='heading--small'><a href='/contribute'>Contribute</a></h4>
+                <ul>
+                    <li>
+                        <a href='/contribute'>Eta Contribution</a>
+                    </li>
+                    <li>
+                        <a href='/contribute/bug-report'>Report an Issue</a>
+                    </li>
+                    <li>
+                        <a href='/contribute/proposals'>Eta Proposals</a>
+                    </li>
+                    <li>
+                        <a href='/contribute/gsoc/2018'>GSoC 2018</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='site-footer-bar bg bg--darkblue color--white pt--60 pb--60'>
+    <div class='container'>
+        <div class='site-footer-bar__social'>
+            <img alt='Eta Logo' src='/images/eta-logo.svg' style='height: 15px; padding-right: 20px;' />
+            <a class='mr--10' href='https://twitter.com/eta_lang' target='_blank'>
+                <svg class style=' ' width='24' height='24' viewBox='0 0 24 24'><path d='M18.27 7.85a2.86 2.86 0 0 0 1.29-1.66 6.06 6.06 0 0 1-1.94.74A3.22 3.22 0 0 0 15.4 6a3.07 3.07 0 0 0-3 3 1.37 1.37 0 0 0 .09.65 8.49 8.49 0 0 1-6.32-3.1 3.11 3.11 0 0 0 1 4.06 3.87 3.87 0 0 1-1.38-.37 3 3 0 0 0 2.4 3c-.18 0-.46.09-.74.09a1.17 1.17 0 0 1-.55-.09 3 3 0 0 0 2.86 2.12A5.87 5.87 0 0 1 6 16.62h-.75A8.92 8.92 0 0 0 9.59 18h.74a8.64 8.64 0 0 0 8.22-8.58V9A6 6 0 0 0 20 7.48c-.53.09-1.09.27-1.73.37zM12 24a12 12 0 1 1 12-12 12 12 0 0 1-12 12z' fill='white' data-name='figures and interactions'></path></svg>
+            </a>
+            <a class='mr--10' href='https://github.com/typelead' target='_blank'>
+              <svg width='24' height='24' viewBox='0 0 256 250' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' preserveAspectRatio='xMidYMid'>
+                <g> <path d='M128.00106,0 C57.3172926,0 0,57.3066942 0,128.00106 C0,184.555281 36.6761997,232.535542 87.534937,249.460899 C93.9320223,250.645779 96.280588,246.684165 96.280588,243.303333 C96.280588,240.251045 96.1618878,230.167899 96.106777,219.472176 C60.4967585,227.215235 52.9826207,204.369712 52.9826207,204.369712 C47.1599584,189.574598 38.770408,185.640538 38.770408,185.640538 C27.1568785,177.696113 39.6458206,177.859325 39.6458206,177.859325 C52.4993419,178.762293 59.267365,191.04987 59.267365,191.04987 C70.6837675,210.618423 89.2115753,204.961093 96.5158685,201.690482 C97.6647155,193.417512 100.981959,187.77078 104.642583,184.574357 C76.211799,181.33766 46.324819,170.362144 46.324819,121.315702 C46.324819,107.340889 51.3250588,95.9223682 59.5132437,86.9583937 C58.1842268,83.7344152 53.8029229,70.715562 60.7532354,53.0843636 C60.7532354,53.0843636 71.5019501,49.6441813 95.9626412,66.2049595 C106.172967,63.368876 117.123047,61.9465949 128.00106,61.8978432 C138.879073,61.9465949 149.837632,63.368876 160.067033,66.2049595 C184.49805,49.6441813 195.231926,53.0843636 195.231926,53.0843636 C202.199197,70.715562 197.815773,83.7344152 196.486756,86.9583937 C204.694018,95.9223682 209.660343,107.340889 209.660343,121.315702 C209.660343,170.478725 179.716133,181.303747 151.213281,184.472614 C155.80443,188.444828 159.895342,196.234518 159.895342,208.176593 C159.895342,225.303317 159.746968,239.087361 159.746968,243.303333 C159.746968,246.709601 162.05102,250.70089 168.53925,249.443941 C219.370432,232.499507 256,184.536204 256,128.00106 C256,57.3066942 198.691187,0 128.00106,0 Z M47.9405593,182.340212 C47.6586465,182.976105 46.6581745,183.166873 45.7467277,182.730227 C44.8183235,182.312656 44.2968914,181.445722 44.5978808,180.80771 C44.8734344,180.152739 45.876026,179.97045 46.8023103,180.409216 C47.7328342,180.826786 48.2627451,181.702199 47.9405593,182.340212 Z M54.2367892,187.958254 C53.6263318,188.524199 52.4329723,188.261363 51.6232682,187.366874 C50.7860088,186.474504 50.6291553,185.281144 51.2480912,184.70672 C51.8776254,184.140775 53.0349512,184.405731 53.8743302,185.298101 C54.7115892,186.201069 54.8748019,187.38595 54.2367892,187.958254 Z M58.5562413,195.146347 C57.7719732,195.691096 56.4895886,195.180261 55.6968417,194.042013 C54.9125733,192.903764 54.9125733,191.538713 55.713799,190.991845 C56.5086651,190.444977 57.7719732,190.936735 58.5753181,192.066505 C59.3574669,193.22383 59.3574669,194.58888 58.5562413,195.146347 Z M65.8613592,203.471174 C65.1597571,204.244846 63.6654083,204.03712 62.5716717,202.981538 C61.4524999,201.94927 61.1409122,200.484596 61.8446341,199.710926 C62.5547146,198.935137 64.0575422,199.15346 65.1597571,200.200564 C66.2704506,201.230712 66.6095936,202.705984 65.8613592,203.471174 Z M75.3025151,206.281542 C74.9930474,207.284134 73.553809,207.739857 72.1039724,207.313809 C70.6562556,206.875043 69.7087748,205.700761 70.0012857,204.687571 C70.302275,203.678621 71.7478721,203.20382 73.2083069,203.659543 C74.6539041,204.09619 75.6035048,205.261994 75.3025151,206.281542 Z M86.046947,207.473627 C86.0829806,208.529209 84.8535871,209.404622 83.3316829,209.4237 C81.8013,209.457614 80.563428,208.603398 80.5464708,207.564772 C80.5464708,206.498591 81.7483088,205.631657 83.2786917,205.606221 C84.8005962,205.576546 86.046947,206.424403 86.046947,207.473627 Z M96.6021471,207.069023 C96.7844366,208.099171 95.7267341,209.156872 94.215428,209.438785 C92.7295577,209.710099 91.3539086,209.074206 91.1652603,208.052538 C90.9808515,206.996955 92.0576306,205.939253 93.5413813,205.66582 C95.054807,205.402984 96.4092596,206.021919 96.6021471,207.069023 Z' fill='#ffffff'></path> </g>
+              </svg>
+            </a>
+            <a class='mr--10' href='https://www.facebook.com/etalanguage/' target='_blank'>
+                <svg class style=' ' width='24' height='24' viewBox='0 0 24 24'><path d='M13.17 7.95a.47.47 0 0 1 .49-.49h2v-3h-3.47A2.44 2.44 0 0 0 9.73 7v3H8.25v3h1.48v7.38h3.45v-7.51h2l.49-3h-2.5zM12 24a12 12 0 1 1 12-12 12 12 0 0 1-12 12z' fill='white' data-name='figures and interactions'></path> </svg>
+            </a>
+        </div>
+        <div class='site-footer-bar__legal text--small'>
+            <span>Copyright © <a href='http://typelead.com' target='_blank'>TypeLead, Inc.</a> All rights reserved.</span>
+            <span> <a href='/legal' target='_blank'> Legal information          </a> </span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>
+                Made with  <img alt='Made with Love' src='/images/love.svg' style='height: 15px; padding: 0px 2px; padding-top: 2px;' /> by
+              <a href='https://twitter.com/jyothsnasrin' target='_blank' style='color: #2cd4d9; opacity: 1;'>
+                   Jyothsna Patnam</a>
+            </span>
+        </div>
+    </div>
+</div>
+
+
+    <style>
+        /* Hero Styles */
+
+        .hero-container {
+            background-image: url('images/home-hero.svg');
+        }
+
+        .hero-content {
+            flex: 1;
+            display: flex;
+            z-index: 100;
+            align-items: center;
+            margin-top: -100px;
+        }
+
+        @media only screen and (max-width: 75em) {
+            .hero-content {
+                display: block;
+                margin-bottom: 40px;
+                margin-top: 0px;
+            }
+        }
+
+        .hero-content {
+            flex: 1;
+            display: flex;
+            z-index: 100;
+            align-items: center;
+            margin-top: -102px;
+        }
+
+        @media only screen and (max-width: 1224px) {
+            .hero-content {
+                margin-top: 120px;
+                display: block;
+                margin-bottom: 40px;
+            }
+        }
+
+        @media only screen and (max-width: 55em) {
+            .hero-content {
+                margin: 0px;
+                padding-top: 40px;
+                padding-bottom: 120px;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) and (max-width: 1223px) {
+          .hero-content {
+              margin-top: 120px;
+              display: block;
+              padding-bottom: 80px;
+          }
+        }
+        #eta-screen {
+            max-width: 912px;
+        }
+
+        @media only screen and (max-width: 75em) {
+            #eta-screen img {
+                width: 100%;
+                height: auto;
+            }
+            #eta-screen {
+                margin: 0 auto;
+                margin-top: 66px;
+            }
+            #eta-man {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 48em) {
+            #eta-screen {
+                margin-top: 20px;
+            }
+        }
+
+        @media only screen and (min-width: 75em) {
+            #eta-screen {
+                position: absolute;
+                top: 50px;
+                right: -160px
+            }
+            #eta-screen img {
+                display: block;
+            }
+        }
+        /* Plan Box */
+
+        .plan-box-container {
+            border-width: 0 1px 0 0;
+            border-style: solid;
+            border-color: #2e1f94;
+        }
+
+        @media only screen and (max-width: 64em) {
+            .plan-box-container {
+                border-width: 0 1px 1px 0;
+                border-style: solid;
+                border-color: #2e1f94;
+            }
+            .plan-box-container:nth-of-type(1) {
+                border-width: 0 1px 1px 0;
+            }
+            .plan-box-container:nth-of-type(2) {
+                border-width: 0 0 1px 0;
+            }
+            .plan-box-container:nth-of-type(3) {
+                border-width: 0px;
+            }
+            .plan-box-container:nth-of-type(4) {
+                border-width: 0 0 0 1px;
+            }
+        }
+
+        @media only screen and (max-width: 47em) {
+            .plan-box-container {
+                border-width: 0 0 1px 0 !important;
+                border-style: solid;
+                border-color: #2e1f94;
+            }
+        }
+
+        .plan-box-container.transparentBorder {
+            border-color: transparent;
+        }
+
+        .plan-box__amount {
+            font-size: 30px;
+        }
+
+        .plan-box-container {
+            position: relative;
+            z-index: 1000
+        }
+
+        .plan-box--floating-bg {
+            height: 25%;
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            background: #5333ed;
+            z-index: 100;
+            transition: all 200ms ease-out
+        }
+
+        @media only screen and (min-width: 48em) {
+            .plan-box--floating-bg {
+                height: 50%;
+                width: 50%;
+                right: 0px;
+                left: auto;
+            }
+        }
+
+        @media only screen and (min-width: 64em) {
+            .plan-box--floating-bg {
+                height: 100%;
+                width: 25%;
+            }
+        }
+
+        #my-eta-man {
+            position: absolute;
+            z-index: 100;
+            bottom: -101px;
+            left: -65px
+        }
+
+        @media only screen and (max-width: 75em) {
+            #my-eta-man {
+                display: none;
+            }
+        }
+
+        #handshake {
+            position: absolute;
+            z-index: 4000;
+            bottom: -170px;
+            left: 76%;
+        }
+
+        @media only screen and (max-width: 48em) {
+            #handshake {
+                display: none;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .dropbtn {
+            background-color: inherit;
+            color: white;
+            padding: 5px;
+            font-size: 14px;
+            font-weight: 300;
+            border: none;
+            font-family: 'Roboto';
+            text-transform: uppercase;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 160px;
+            box-shadow: 0px 10px 40px 0px rgba(47, 47, 47, 0.1);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #5333ed;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: inherit;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: inherit;
+        }
+    </style>
+    <script>
+        function switchImage(index) {
+            var images = document.getElementsByClassName('screen__image');
+            for (i = 0; i < images.length; i++) {
+                if (i === index) {
+                    images[i].style = 'display:inline'
+                } else {
+                    images[i].style = 'display:none'
+                }
+            }
+        }
+
+        jQuery('.plan-box-container').on('mouseenter', function() {
+            if (jQuery(window).width() > 768) {
+                var leftValue = jQuery(this).index() * 25;
+                jQuery('.plan-box--floating-bg').css({
+                    left: leftValue + '%'
+                });
+            }
+        });
+    </script>
+    <script type='text/javascript' src='js/scripts/jquery.accordion.js'></script>
+    <script type='text/javascript' src='js/scripts/smoothscroll.js'></script>
+    <script type='text/javascript' src='js/scripts.js'></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-89651019-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

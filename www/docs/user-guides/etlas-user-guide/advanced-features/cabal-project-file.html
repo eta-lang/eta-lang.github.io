@@ -1,0 +1,811 @@
+<html lang='en-US'>
+
+<head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1' />
+    <meta name='pinterest' content='nopin' />
+    <title>Advanced Features</title>
+    <link rel='canonical' href='https://eta-lang.org' />
+    <meta name='keywords' content='Documentation, Eta, Haskell, Scala, Clojure, JVM, Functional Programming, Functional Programming on the JVM, Java Virtual Machine' />
+    <meta name='description' content='Documentation of Eta Programming Language.' />
+    <link rel='apple-touch-icon' sizes='57x57' href='/favicon/apple-icon-57x57.png' />
+    <link rel='apple-touch-icon' sizes='60x60' href='/favicon/apple-icon-60x60.png' />
+    <link rel='apple-touch-icon' sizes='72x72' href='/favicon/apple-icon-72x72.png' />
+    <link rel='apple-touch-icon' sizes='76x76' href='/favicon/apple-icon-76x76.png' />
+    <link rel='apple-touch-icon' sizes='114x114' href='/favicon/apple-icon-114x114.png' />
+    <link rel='apple-touch-icon' sizes='120x120' href='/favicon/apple-icon-120x120.png' />
+    <link rel='apple-touch-icon' sizes='144x144' href='/favicon/apple-icon-144x144.png' />
+    <link rel='apple-touch-icon' sizes='152x152' href='/favicon/apple-icon-152x152.png' />
+    <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-icon-180x180.png' />
+    <link rel='icon' type='image/png' sizes='192x192' href='/favicon/android-icon-192x192.png' />
+    <link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png' />
+    <link rel='icon' type='image/png' sizes='96x96' href='/favicon/favicon-96x96.png' />
+    <link rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png' />
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel='stylesheet' href='/css/eta-theme.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='/css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto%3A100%2C300%2C400%2C700&ver=5a155dfba583c' type='text/css' media='all' />
+    <link href='https://fonts.googleapis.com/css?family=Cousine' rel='stylesheet' />
+    <link rel='stylesheet' id='jquery-slick-css' href='/css/slick.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='jquery-slick-theme-css' href='/css/slick-theme.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css' />
+    <script type='text/javascript' src='/js/jquery/jquery.js'></script>
+    <script type='text/javascript' src='/js/jquery/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='/js/slick.js'></script>
+</head>
+
+<body class='page-template page-template-custom-pages page-template-page page-template-features page-template-custom-pagespagefeatures-php page page-id-4566 object-4566'>
+
+    <!-- Hero Section -->
+    <div class='hero-container'>
+        <style>
+.dropbtn {
+    background-color: inherit;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 300;
+    border: none;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+}
+
+.mobile-nav .dropbtn{
+  font-size: 22px;
+  text-transform: none;
+  padding-left: 0px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 10px 40px 0px rgba(47, 47, 47, 0.1);
+    z-index: 1;
+}
+
+.mobile-nav .dropdown-content{
+  position: static;
+  background-color: inherit;
+  min-width: inherit;
+  box-shadow: 0px 0px 0px 0px #000000;
+}
+
+.dropdown-content a {
+    color: #5333ed;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {background-color: inherit;}
+
+.mobile-nav .dropdown-content a:hover {background-color: none;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: inherit;
+}
+
+</style>
+<div class='container hero-menu'>
+    <div class='row'>
+        <div class='col-xs-12 pt--50 pt--md--30 pt--xs--30'>
+            <div id='site-menu-outer-container'>
+                <div class='site-menu-container' id='site-menu'>
+                    <div class='site-menu'>
+                        <div class='site-menu__logo'>
+                            <a href='https://eta-lang.org'>
+                              <img alt='Eta Logo' src='/images/eta-logo-docs.svg' src='/images/eta-logo.svg' style='height: 20px;' />
+                            </a>
+                        </div>
+                        <input type='checkbox' id='hamburger-menu-trigger' />
+                        <nav class='site-menu__nav'>
+                            <ul>
+                                <li>
+                                    <a class='active ' href='/'><span>Home</span></a>
+                                </li>
+                                <li>
+                                    <div class='dropdown'>
+                                        <button class='dropbtn active'>Documentation
+                                        <img src='/images/arrow-down.svg' height='10px;' />
+                                        </button>
+                                        <div class='dropdown-content dropdown-hide'>
+                                            <a href='/docs/'>Docs Home</a>
+                                            <a href='/docs/user-guides'>User Guides</a>
+                                            <a href='/docs/tutorials'>Tutorials</a>
+                                            <a href='/docs/cheatsheets'>Cheatsheets</a>
+                                            <a href='/docs/faq'>FAQ</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='dropdown'>
+                                        <button class='dropbtn active'>Community
+                                          <img src='/images/arrow-down.svg' height='10px;' />
+                                        </button>
+                                        <div class='dropdown-content dropdown-hide'>
+                                            <a href='/community'>Community Home</a>
+                                            <a href='/contribute'>Contribute</a>
+                                            <a href='/contribute/proposals'>Proposals</a>
+                                            <a href='/contribute/bug-report'>Bug Reports</a>
+                                            <a href='/contribute/gsoc/2018'>GSoC 2018</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a class=' ' href='https://tour.eta-lang.org/'><span>Tour of Eta</span></a>
+                                </li>
+                                <li>
+                                    <a class=' ' href='https://blog.eta-lang.org'><span>Blog</span></a>
+                                </li>
+                                <li>
+                                    <a class=' ' href='https://github.com/typelead/eta' target='_blank'><span>GitHub</span></a>
+                                </li>
+                                <li>
+                                    <a class='login' href='/docs/user-guides/eta-user-guide/installation/methods'><span>Install</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <label for='hamburger-menu-trigger' class='show-xs-only'>
+                        <svg class style=' ' width='24' height='24' viewBox='0 0 24 24'><g fill-rule='nonzero' fill='white'><path d='M24 4.5c0 .825-.675 1.5-1.5 1.5h-21C.675 6 0 5.325 0 4.5S.675 3 1.5 3h21c.825 0 1.5.675 1.5 1.5zM24 12c0 .825-.675 1.5-1.5 1.5h-21C.675 13.5 0 12.825 0 12s.675-1.5 1.5-1.5h21c.825 0 1.5.675 1.5 1.5zM24 19.5c0 .825-.675 1.5-1.5 1.5h-21C.675 21 0 20.325 0 19.5S.675 18 1.5 18h21c.825 0 1.5.675 1.5 1.5z'></path></g></svg>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class='container hero-content col middle-xs'>
+            <div class='row'>
+                <div class='col-xs-12 col-sm-12 col-lg-12 color--white'>
+                    <h1 class='heading--large'>Advanced Features</h1>
+
+                    <p class='text--large mt--20'>Dive into features for specialized use cases</p>
+                    <div class='resource-bar__search pt--10 show-lg-only'>
+                      <div class='resource-bar__search_placeholder'>
+                        <form class='row middle-xs submitter nocol' method='get' action>
+                          <input name='s' id='search-docs' type='text' required='required' value placeholder style='border-bottom: 1px solid white;' />
+                          <svg class='submitter__trigger' style=' ' width='16' height='16' viewBox='0 0 16 16'><g fill='none' stroke='#fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' data-name='figures and interactions'><circle cx='7.28' cy='7.15' r='3.17'></circle><path d='M11.89 12.02L9.7 9.83'></path></g></svg>
+                        </form>
+                     </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class='row'>
+        <div class='col-lg-3 index-wrapper mt--20 show-lg-only' style='z-index: 1;'>
+            <ul class='bullets-index' id='chaps'>
+                <div class='resource-bar__search pt--10 show-lg-only' id='search_bar_sidenav'>
+                  <div class='resource-bar__search_placeholder'>
+                    <form class='row middle-xs submitter nocol' method='get' action>
+                      <input name='s' id='min-search-docs' type='text' required='required' value placeholder='Search Documentation' style='border-bottom: 1px solid white;' />
+                      <svg class='submitter__trigger' style=' ' width='16' height='16' viewBox='0 0 16 16'><g fill='none' stroke='#5333ed' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' data-name='figures and interactions'><circle cx='7.28' cy='7.15' r='3.17'></circle><path d='M11.89 12.02L9.7 9.83'></path></g></svg>
+                    </form>
+                  </div>
+                </div>
+                <li style="background: url('/images/startup.svg') no-repeat left top;background-size: 28px 28px;background-position: 5px 15px;padding-left: 44px;padding-top: 4px;"><a>Introduction</a><ul class='assignments hide'><li><a href='/docs/user-guides/etlas-user-guide/introduction/what-is-etlas'>What is Etlas?</a></li><li><a href='/docs/user-guides/etlas-user-guide/introduction/philosophy-of-etlas'>Philosophy of Etlas</a></li></ul></li><li style="background: url('/images/installation.svg') no-repeat left top;background-size: 28px 28px;background-position: 5px 15px;padding-left: 44px;padding-top: 4px;"><a>Installation</a><ul class='assignments hide'><li><a href='/docs/user-guides/etlas-user-guide/installation/installation'>Methods</a></li><li><a href='/docs/user-guides/etlas-user-guide/installation/binary'>Binary</a></li><li><a href='/docs/user-guides/etlas-user-guide/installation/source'>Source</a></li></ul></li><li style="background: url('/images/basics.svg') no-repeat left top;background-size: 28px 28px;background-position: 5px 15px;padding-left: 44px;padding-top: 4px;"><a>Basics</a><ul class='assignments hide'><li><a href='/docs/user-guides/etlas-user-guide/basics/initializing'>Initializing</a></li><li><a href='/docs/user-guides/etlas-user-guide/basics/the-build-process'>The Build Process</a></li><li><a href='/docs/user-guides/etlas-user-guide/basics/build-components'>Build Components</a></li></ul></li><li style="background: url('/images/compiler.svg') no-repeat left top;background-size: 28px 28px;background-position: 5px 15px;padding-left: 44px;padding-top: 4px;"><a>Configuration</a><ul class='assignments hide'><li><a href='/docs/user-guides/etlas-user-guide/configuration/workflow-tutorial'>Workflow Tutorial</a></li><li><a href='/docs/user-guides/etlas-user-guide/configuration/dependency-management'>Dependency Management</a></li><li><a href='/docs/user-guides/etlas-user-guide/configuration/project-configuration'>Project Configuration</a></li></ul></li><li style="background: url('/images/invoke.svg') no-repeat left top;background-size: 28px 28px;background-position: 5px 15px;padding-left: 44px;padding-top: 4px;"><a>Advanced Features</a><ul class='assignments'><li><a href='/docs/user-guides/etlas-user-guide/advanced-features/cabal-file'>Cabal File</a></li><li><a href='/docs/user-guides/etlas-user-guide/advanced-features/conditional-configuration'>Conditional Configuration</a></li><li><a href='/docs/user-guides/etlas-user-guide/advanced-features/cabal-project-file'>Cabal Project File</a></li></ul></li><li style="background: url('/images/ide.svg') no-repeat left top;background-size: 28px 28px;background-position: 5px 15px;padding-left: 44px;padding-top: 4px;"><a>Command Reference</a><ul class='assignments hide'><li><a href='/docs/user-guides/etlas-user-guide/command-reference/global-flags'>Global Flags</a></li><li><a href='/docs/user-guides/etlas-user-guide/command-reference/build'>Build</a></li><li><a href='/docs/user-guides/etlas-user-guide/command-reference/freeze'>Freeze</a></li><li><a href='/docs/user-guides/etlas-user-guide/command-reference/update'>Update</a></li><li><a href='/docs/user-guides/etlas-user-guide/command-reference/select'>Select</a></li><li><a href='/docs/user-guides/etlas-user-guide/command-reference/info'>Info</a></li><li><a href='/docs/user-guides/etlas-user-guide/command-reference/list'>List</a></li><li><a href='/docs/user-guides/etlas-user-guide/command-reference/get'>Get</a></li><li><a href='/docs/user-guides/etlas-user-guide/command-reference/clean'>Clean</a></li></ul></li>
+            </ul>
+        </div>
+        <div class='col-lg-9 col-sm-12 col-xs-12 content-wrapper bg--gray pl--50 pr--50 pl--xs--20 pr--xs--20'>
+            <div class='box box--padding--top--20 mt--20 ml--xs--0 pl--xs--0' id='box-main'>
+                <div class='row' id='header-box'>
+                    <div class='col-lg-2 show-lg-only'>
+                      <img src='/images/invoke.svg' alt='Advanced Features' class='header-image' />
+                    </div>
+                    <div class='col-lg-10 col-xs-12 col-sm-12'>
+                        <div class='resource-bar__breadcrumb show-lg-only'>
+                            <nav class='breadcrumb start-lg color--white'>
+                                <ul class='start-lg mt--30 ml--20'>
+                                  <li><a href='/docs/user-guides/etlas-user-guide'>Etlas User Guide</a></li><li><a href="">Advanced Features</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <h3 class='heading--small mb--20 start-lg center-xs center-sm pl--20 pt--10 pt--sm--60' id='header-title'>Cabal Project File</h3>
+                    </div>
+                </div>
+                <div class='row mr--20 ml--20' id='header-contents'>
+                    <div class='col-lg-1'>
+                    </div>
+                    <div class='col-lg-11 col-sm-12 col-xs-12 center-xs start-lg center-sm'>
+                        <h3 class='heading--medium color--purple mt--20 mb--20'>
+                            Contents
+                        </h3>
+                        <ul class='header-contents-list bullet-list' list-style='1'>
+                          <li><a href='#overview'>Overview</a></li><li><a href='#field-types'>Field Types</a></li><li><a href='#local-packages'>Local Packages</a></li><li><a href='#global-configuration'>Global Configuration</a></li><li><a href='#solver-configuration'>Solver Configuration</a></li><li><a href='#package-configuration'>Package Configuration</a></li><li><a href='#documentation-configuration'>Documentation Configuration</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class='box box--padding--top--20 mt--20 mb--20' id='overview'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Overview
+              <a class='anchor-link' href='#overview'></a>
+            </h3>
+            <p>This entire section is devoted to taking you through all the available configuration options for the packages in your build with the <span class='inline-code'>cabal.project</span> file.</p><br /><p>A <span class='inline-code'>cabal.project</span> file allows you to select sets of packages in your build (both local and external packages) and apply configuration to them. Note that most flags of <span class='inline-code'>etlas build</span> will have a corresponding entry in the <span class='inline-code'>cabal.project</span>, but a <span class='inline-code'>cabal.project</span> gives you much more flexibility.</p><br /><h3 class='heading--small mb--20'>Alternatives</h3><p>Note that <span class='inline-code'>cabal.project.local</span> and <span class='inline-code'>cabal.project.freeze</span> follow the same specification, but they are meant for different purposes.</p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>cabal.project.local</span> is not meant to be checked into source control and is meant for local, ad-hoc changes to the build.</li><li><span class='inline-code'>cabal.project.freeze</span> is meant to be checked in if the project is an end-user executable and you want to keep the dependency resolution stable across platforms.</li></ul>
+        </div>
+    </div>
+</div>
+<div class='box box--padding--top--20 mt--20 mb--20' id='field-types'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Field Types
+              <a class='anchor-link' href='#field-types'></a>
+            </h3>
+            <p>The field types defined in the <a href='./cabal-file#field-types' target='_blank'>Cabal File</a> section apply in this section as well. Additional field types are defined below.</p><br /><h3 class='heading--small mb--20'>component-name</h3><p>A component name represents the name of a component like the name of an executable component for example.</p><br /><h3 class='heading--small mb--20'>component-type</h3><p>A component type can take one of the following values:</p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>lib</span></li><li><span class='inline-code'>exe</span></li><li><span class='inline-code'>test</span></li><li><span class='inline-code'>bench</span></li></ul><h3 class='heading--small mb--20'>eta-version</h3><p>An Eta version is of the form <span class='inline-code'>[version]b[nonnegative-integer]</span>.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><p><span class='inline-code'>0.8.6b4</span></p><br /></li></ul><h3 class='heading--small mb--20'>filepath-glob</h3><p>A filepath glob is just like a <span class='inline-code'>filepath</span> but it accepts <span class='inline-code'>*</span> in the path to allow you to match multiple filepaths at once.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>./*.cabal</span></li><li><span class='inline-code'>./hello.cabal</span></li><li><span class='inline-code'>hello.cabal</span></li></ul><h3 class='heading--small mb--20'>flag-specifier</h3><p>A flag specifier is either of the form <span class='inline-code'>+[flagname]</span> or <span class='inline-code'>-[flagname]</span> where <span class='inline-code'>+</span> means to enable the flag and <span class='inline-code'>-</span> means to disable the flag.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>+developer</span></li><li><span class='inline-code'>-slow</span></li></ul><h3 class='heading--small mb--20'>index-timestamp</h3><p>An index timestamp can either have the value <span class='inline-code'>HEAD</span> or an <a href='https://en.wikipedia.org/wiki/ISO_8601' target='_blank'>ISO 8601 Date/Time Format</a>.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>HEAD</span></li><li><span class='inline-code'>2018-04-28T11:00:19Z</span></li></ul><h3 class='heading--small mb--20'>integer</h3><p>An integer is can be any whole number that is either positive or negative.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>-1</span></li><li><span class='inline-code'>0</span></li><li><span class='inline-code'>1</span></li></ul><h3 class='heading--small mb--20'>nonnegative-integer</h3><p>An nonnegative integer is any whole number, including 0.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>0</span></li><li><span class='inline-code'>123</span></li></ul><h3 class='heading--small mb--20'>num-cpus</h3><p>A num cpus can be a <span class='inline-code'>positive-integer</span> or have the value <span class='inline-code'>$ncpus</span>. The meaning of <span class='inline-code'>$ncpus</span> is the number of processor cores on the system.</p><br /><h3 class='heading--small mb--20'>optimization</h3><p>An optimization can take one of the following values:</p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>0</span></li><li><span class='inline-code'>1</span></li><li><span class='inline-code'>2</span></li></ul><h3 class='heading--small mb--20'>package-db</h3><p>A package database can be one of the following:</p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>global</span> - Use the global package database (located in system directory)</li><li><span class='inline-code'>user</span> - Use the user package database (located in <span class='inline-code'>HOME</span> folder)</li><li><span class='inline-code'>clear</span> - Reset the package database so far</li><li><span class='inline-code'>[directory]</span> - Path to the package database</li></ul><h3 class='heading--small mb--20'>path-template</h3><p>A path template that can additionally use the specialized keywords defined in the table below in the path.</p><br /><table class='markdown-table'><thead><tr><td width='36.42857142857142%' align='left'> Template Variable</td><td width='23.57142857142857%' align='right'> Description</td></tr></thead><tbody><tr><td align='left'> <span class='inline-code'>$prefix</span></td><td align='right'> The root of all the Etlas-related data</td></tr><tr><td align='left'> <span class='inline-code'>$libname</span></td><td align='right'> The name of the library</td></tr><tr><td align='left'> <span class='inline-code'>$bindir</span></td><td align='right'> Where binaries are stored</td></tr><tr><td align='left'> <span class='inline-code'>$libdir</span></td><td align='right'> Where libraries are installed</td></tr><tr><td align='left'> <span class='inline-code'>$datadir</span></td><td align='right'> Where data files are installed</td></tr><tr><td align='left'> <span class='inline-code'>$docdir</span></td><td align='right'> Where documentation is installed</td></tr><tr><td align='left'> <span class='inline-code'>$htmldir</span></td><td align='right'> Where the html documentation is installed</td></tr><tr><td align='left'> <span class='inline-code'>$pkg</span></td><td align='right'> Name of package</td></tr><tr><td align='left'> <span class='inline-code'>$version</span></td><td align='right'> Version of package</td></tr><tr><td align='left'> <span class='inline-code'>$pkgid</span></td><td align='right'> Name and version of package, e.g. <span class='inline-code'>binary-1.0</span></td></tr><tr><td align='left'> <span class='inline-code'>$compiler</span></td><td align='right'> Name of compiler</td></tr><tr><td align='left'> <span class='inline-code'>$os</span></td><td align='right'> Current operating system</td></tr><tr><td align='left'> <span class='inline-code'>$arch</span></td><td align='right'> Current architecture</td></tr><tr><td align='left'> <span class='inline-code'>$abitag</span></td><td align='right'> Tag that represents Application Binary Interface (ABI)</td></tr><tr><td align='left'> <span class='inline-code'>$abi</span></td><td align='right'> Hash that represents Application Binary Interface (ABI)</td></tr></tbody></table><br /><h3 class='heading--small mb--20'>positive-integer</h3><p>An positive integer is any whole number, not including 0.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>1</span></li><li><span class='inline-code'>123</span></li></ul><h3 class='heading--small mb--20'>scoped-package</h3><p>A scoped package can be of the form <span class='inline-code'>[package-name]</span> or <span class='inline-code'>[package-name]:[package-name]</span>. It can also take the values <span class='inline-code'>all</span> or <span class='inline-code'>none</span>.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>bytestring</span></li><li><span class='inline-code'>all</span></li><li><span class='inline-code'>binary:bytestring</span></li><li><span class='inline-code'>none</span></li></ul><h3 class='heading--small mb--20'>scoped-packages</h3><p>Scoped packages can be <span class='inline-code'>none</span>, <span class='inline-code'>all</span>, or <span class='inline-code'>strict-comma-list[scoped-package]</span>.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>all</span></li><li><span class='inline-code'>none</span></li><li><span class='inline-code'>bytestring</span></li><li><span class='inline-code'>bytestring,binary:bytestring</span></li></ul><h3 class='heading--small mb--20'>transport-type</h3><p>A transport type should be one of the following:</p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>curl</span></li><li><span class='inline-code'>wget</span></li><li><span class='inline-code'>powershell</span></li><li><span class='inline-code'>plain-http</span></li></ul><h3 class='heading--small mb--20'>user-constraint</h3><p>A user constraint is of the form <span class='inline-code'>[package-name] [version-range]</span> or <span class='inline-code'>[package-name] list[flag-specifier]</span>.</p><br /><p><span class='text--bold pb--20'>Examples</span></p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>bytestring == 0.1.2.3</span></li><li><span class='inline-code'>bytestring +fast -developer</span></li></ul><h3 class='heading--small mb--20'>verbosity</h3><p>A verbosity is a number that can be one of the following values:</p><br /><ul class='bullet-list pl--20 pb--20'><li><span class='inline-code'>0</span></li><li><span class='inline-code'>1</span></li><li><span class='inline-code'>2</span></li><li><span class='inline-code'>3</span></li></ul>
+        </div>
+    </div>
+</div>
+<div class='box box--padding--top--20 mt--20 mb--20' id='local-packages'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Local Packages
+              <a class='anchor-link' href='#local-packages'></a>
+            </h3>
+            <p>The following top-level options specify what the local packages of a project are:</p><br /><table class='markdown-table'><thead><tr><td width='20.0%' align='left'> Field</td><td width='32.0%'> Field Type</td><td width='48.0%' align='right'> Description</td></tr></thead><tbody><tr><td align='left'> <span class='inline-code'>packages</span></td><td align='center'> <span class='inline-code'>list[filepath-glob]</span></td><td align='right'> List of package paths that should be included in the build. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>./*.cabal</span></td></tr><tr><td align='left'> <span class='inline-code'>optional-packages</span></td><td align='center'> <span class='inline-code'>list[filepath-glob]</span></td><td align='right'> Like <span class='inline-code'>packages</span> but does not require the paths to exist. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>./*/*.cabal</span></td></tr><tr><td align='left'> <span class='inline-code'>extra-packages</span></td><td align='center'> <span class='inline-code'>comma-list[dependency-constraint]</span></td><td align='right'> Additional named packages to install to the Etlas Store</td></tr></tbody></table><br /><h3 class='heading--small mb--20'>Example</h3><p><span class='text--bold pb--20'>cabal.project</span></p><br /><div class='highlight'><pre><span></span>packages: . ./app
+optional-packages: ./app/custom-fork
+extra-packages: bytestring &gt; 1.0.0
+</pre></div>
+
+        </div>
+    </div>
+</div>
+<div class='box box--padding--top--20 mt--20 mb--20' id='global-configuration'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Global Configuration
+              <a class='anchor-link' href='#global-configuration'></a>
+            </h3>
+            <p>The following top-level configuration options are not specific to any package:</p><br /><table class='markdown-table'><thead><tr><td width='18.253968253968253%' align='left'> Field</td><td width='19.047619047619047%'> Field Type</td><td width='62.698412698412696%' align='right'> Description</td></tr></thead><tbody><tr><td align='left'> <span class='inline-code'>verbose</span></td><td align='center'> <span class='inline-code'>verbosity</span></td><td align='right'> Controls the verbosity of <span class='inline-code'>etlas</span> commands, higher is more verbose. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>1</span></td></tr><tr><td align='left'> <span class='inline-code'>jobs</span></td><td align='center'> <span class='inline-code'>num-cpus</span></td><td align='right'> Run the given number of jobs simultaneously when building. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>1</span></td></tr><tr><td align='left'> <span class='inline-code'>keep-going</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> When true, continue to build other unaffected packages, after a build failure. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr><tr><td align='left'> <span class='inline-code'>builddir</span></td><td align='center'> <span class='inline-code'>directory</span></td><td align='right'> Specifies the directory where build artifacts should be stored. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>dist</span></td></tr><tr><td align='left'> <span class='inline-code'>project-file</span></td><td align='center'> <span class='inline-code'>filepath</span></td><td align='right'> Specifies the path to the project file which is used for the rest of the top-level configuration. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>cabal.project</span></td></tr><tr><td align='left'> <span class='inline-code'>select-eta</span></td><td align='center'> <span class='inline-code'>eta-version</span></td><td align='right'> Use an Etlas-managed version of Eta.</td></tr><tr><td align='left'> <span class='inline-code'>auto-update</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Whether to update the package indices automatically. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>True</span></td></tr><tr><td align='left'> <span class='inline-code'>send-metrics</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Whether to send metrics to help aid the future development of Eta. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr><tr><td align='left'> <span class='inline-code'>http-transport</span></td><td align='center'> <span class='inline-code'>transport-type</span></td><td align='right'> Transport to be used when making http(s) requests. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>curl</span></td></tr><tr><td align='left'> <span class='inline-code'>ignore-expiry</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Ignore expiry dates on metadata from Hackage. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr><tr><td align='left'> <span class='inline-code'>remote-repo-cache</span></td><td align='center'> <span class='inline-code'>directory</span></td><td align='right'> Location where source tarballs downloaded from remote repositories are stored. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>~/.etlas/packages</span></td></tr><tr><td align='left'> <span class='inline-code'>logs-dir</span></td><td align='center'> <span class='inline-code'>directory</span></td><td align='right'> Location where build logs are stored. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>~/.etlas/logs</span></td></tr><tr><td align='left'> <span class='inline-code'>patches-dir</span></td><td align='center'> <span class='inline-code'>directory</span></td><td align='right'> Directory where patches are stored. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>~/.etlas/patches</span></td></tr><tr><td align='left'> <span class='inline-code'>binaries-dir</span></td><td align='center'> <span class='inline-code'>directory</span></td><td align='right'> Directory where downloaded binary executables and packages are stored. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>~/.etlas/binaries</span></td></tr><tr><td align='left'> <span class='inline-code'>build-summary</span></td><td align='center'> <span class='inline-code'>path-template</span></td><td align='right'> Location where the build summary is stored. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>~/.etlas/logs/build.log</span></td></tr></tbody></table>
+        </div>
+    </div>
+</div>
+<div class='box box--padding--top--20 mt--20 mb--20' id='solver-configuration'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Solver Configuration
+              <a class='anchor-link' href='#solver-configuration'></a>
+            </h3>
+            <p>The following settings control the behavior of the dependency solver. All the fields are commas seperated</p><br /><table class='markdown-table'><thead><tr><td width='27.32919254658385%' align='left'> Field</td><td width='35.40372670807454%'> Field Type</td><td width='37.267080745341616%' align='right'> Description</td></tr></thead><tbody><tr><td align='left'> <span class='inline-code'>constraints</span></td><td align='center'> <span class='inline-code'>comma-list[user-constraint]</span></td><td align='right'> Add version or flag constraints for dependencies.</td></tr><tr><td align='left'> <span class='inline-code'>preferences</span></td><td align='center'> <span class='inline-code'>comma-list[dependency-constraint]</span></td><td align='right'> Dependency constraints are taken into account, but loosely followed.</td></tr><tr><td align='left'> <span class='inline-code'>allow-newer</span></td><td align='center'> <span class='inline-code'>scoped-packages</span></td><td align='right'> Ignore upper bounds for the list of scoped packages. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>none</span></td></tr><tr><td align='left'> <span class='inline-code'>allow-older</span></td><td align='center'> <span class='inline-code'>scoped-packages</span></td><td align='right'> Ignore lower bounds for the list of scoped packages. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>none</span></td></tr><tr><td align='left'> <span class='inline-code'>index-state</span></td><td align='center'> <span class='inline-code'>index-timestamp</span></td><td align='right'> Set the source package index state to the given value. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>HEAD</span></td></tr><tr><td align='left'> <span class='inline-code'>max-backjumps</span></td><td align='center'> <span class='inline-code'>integer</span></td><td align='right'> Maximum number of backtracking steps allowed while solving. <div><br /></div> <span class='inline-code'>-1</span> to allow unlimited backtracking <div><br /></div> <span class='inline-code'>0</span> to disable backtracking completely <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>2000</span></td></tr><tr><td align='left'> <span class='inline-code'>reorder-goals</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Enable the solver to reorder goals according to certain heuristics. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr><tr><td align='left'> <span class='inline-code'>count-conflicts</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Speed up solving by preferring goals that are involved in a lot of conflicts. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>True</span></td></tr><tr><td align='left'> <span class='inline-code'>strong-flags</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Do not defer flag choices. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr><tr><td align='left'> <span class='inline-code'>allow-boot-library-installs</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Allow <span class='inline-code'>base</span>, <span class='inline-code'>ghc-prim</span>, <span class='inline-code'>integer-simple</span>, <span class='inline-code'>integer-gmp</span>, and <span class='inline-code'>template-haskell</span> to be installed or upgraded. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr></tbody></table>
+        </div>
+    </div>
+</div>
+<div class='box box--padding--top--20 mt--20 mb--20' id='package-configuration'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Package Configuration
+              <a class='anchor-link' href='#package-configuration'></a>
+            </h3>
+            <p>The following options can affect individual packages or sets of packages.</p><br /><h3 class='heading--small mb--20'>Top-Level</h3><p>If package options are specified at the top-level, they apply to all <span class='text--bold pb--20'>local</span> packages.</p><br /><p><span class='text--bold pb--20'>Example</span></p><br /><div class='highlight'><pre><span></span><span class='n'>optimization</span><span class='o'>:</span> <span class='mi'>2</span>
+</pre></div>
+<br /><h3 class='heading--small mb--20'>all-packages</h3><p>If they are applied in an <span class='inline-code'>all-packages</span> stanza, it applies to both <span class='text--bold pb--20'>local</span> and <span class='text--bold pb--20'>external</span> packages.</p><br /><p><span class='text--bold pb--20'>Example</span></p><br /><div class='highlight'><pre><span></span>all-packages
+  optimization: 2
+</pre></div>
+<br /><h3 class='heading--small mb--20'>package</h3><p>If they are applied in a <span class='inline-code'>package</span> stanza, they will apply to the package listed after the <span class='inline-code'>package</span> keyword. Both <span class='text--bold pb--20'>local</span> and <span class='text--bold pb--20'>external</span> package names may be specified.</p><br /><p><span class='text--bold pb--20'>Example</span></p><br /><div class='highlight'><pre><span></span>package bytestring
+  optimization: 2
+</pre></div>
+<br /><h3 class='heading--small mb--20'>Option Listing</h3><table class='markdown-table'><thead><tr><td width='18.51851851851852%' align='left'> Field</td><td width='25.925925925925924%'> Field Type</td><td width='55.55555555555556%' align='right'> Description</td></tr></thead><tbody><tr><td align='left'> <span class='inline-code'>flags</span></td><td align='center'> <span class='inline-code'>list[flag-specifier]</span></td><td align='right'> Configure flag assignments for the package</td></tr><tr><td align='left'> <span class='inline-code'>optimization</span></td><td align='center'> <span class='inline-code'>optimization</span></td><td align='right'> Build with optimization at the level specified. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>1</span></td></tr><tr><td align='left'> <span class='inline-code'>tests</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Enable test suites. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr><tr><td align='left'> <span class='inline-code'>benchmarks</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Enable benchmarks. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr><tr><td align='left'> <span class='inline-code'>run-tests</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Run the package test suite upon installation and fail the build if it doesn't pass. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr><tr><td align='left'> <span class='inline-code'>verify</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Verifies the whether the output JAR files are valid</td></tr><tr><td align='left'> <span class='inline-code'>debug-info</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Generate extra information in the compiled binary that supports debugging. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr></tbody></table>
+        </div>
+    </div>
+</div>
+<div class='box box--padding--top--20 mt--20 mb--20' id='documentation-configuration'>
+    <div class='row'>
+        <div class='col-lg-12 col-sm-12 center-sm center-xs' style='text-align: left'>
+            <h3 class='heading--medium mb--20 color--purple'>
+              Documentation Configuration
+              <a class='anchor-link' href='#documentation-configuration'></a>
+            </h3>
+            <table class='markdown-table'><thead><tr><td width='23.300970873786408%' align='left'> Field</td><td width='18.446601941747574%'> Field Type</td><td width='58.252427184466015%' align='right'> Description</td></tr></thead><tbody><tr><td align='left'> <span class='inline-code'>documentation</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Enables documentation build. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr><tr><td align='left'> <span class='inline-code'>doc-index-file</span></td><td align='center'> <span class='inline-code'>path-template</span></td><td align='right'> Path to central index of API documentation</td></tr><tr><td align='left'> <span class='inline-code'>docs-html</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Build HTML documentation. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>True</span>.</td></tr><tr><td align='left'> <span class='inline-code'>docs-html-location</span></td><td align='center'> <span class='inline-code'>path-template</span></td><td align='right'> Specify template for the location of HTML documentation for prerequisite packages</td></tr><tr><td align='left'> <span class='inline-code'>docs-executables</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Generate documentation for all executables. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr><tr><td align='left'> <span class='inline-code'>docs-tests</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Generate documentation for all tests. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr><tr><td align='left'> <span class='inline-code'>docs-benchmarks</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Generate documentation for all benchmarks. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr><tr><td align='left'> <span class='inline-code'>docs-all</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Generate documentation for all components. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr><tr><td align='left'> <span class='inline-code'>docs-internal</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Generate documentation for hidden modules and symbols. <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr><tr><td align='left'> <span class='inline-code'>docs-css</span></td><td align='center'> <span class='inline-code'>filepath</span></td><td align='right'> Path to CSS file that styles the generated documentation</td></tr><tr><td align='left'> <span class='inline-code'>docs-contents-location</span></td><td align='center'> <span class='inline-code'>url</span></td><td align='right'> URL to be used as the location for the contents page</td></tr><tr><td align='left'> <span class='inline-code'>docs-keep-temp-files</span></td><td align='center'> <span class='inline-code'>boolean</span></td><td align='right'> Keep temporary files <div><br /></div> <span class='text--bold pb--20'>Default:</span> <span class='inline-code'>False</span></td></tr></tbody></table>
+        </div>
+    </div>
+</div>
+
+            <div class='row mr--20 ml--20 pt--40 pb--60'>
+              <div class='col-md-4 start-md'>
+                <a href='/docs/user-guides/etlas-user-guide/advanced-features/conditional-configuration' class='button--purple'>Previous</a>
+              </div>
+              <div class='col-md-4 center-md show-lg-only'>
+                <a class='button--purple ' href='#'>Read again</a>
+              </div>
+              <div class='col-md-4 center-md show-xs-only'>
+
+              </div>
+              <div class='col-md-4 end-md end-sm'>
+                <a href='/docs/user-guides/etlas-user-guide/command-reference/global-flags' class='button--purple'>Next</a>
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <script type='text/javascript'>
+        function switchImage(index) {
+            var images = document.getElementsByClassName('screen__image');
+            for (i = 0; i < images.length; i++) {
+                if (i === index) {
+                    images[i].style = 'display:inline'
+                } else {
+                    images[i].style = 'display:none'
+                }
+            }
+        }
+    </script>
+
+    <style media='screen'>
+        #my-eta-man {
+            position: absolute;
+            z-index: 100;
+            bottom: -101px;
+            left: -65px
+        }
+        /*1200px*/
+
+        @media only screen and (max-width: 75em) {
+            #my-eta-man {
+                display: none;
+            }
+        }
+        /* Hero Section */
+
+        .hero-container {
+            height: 68vh;
+            min-height: 500px;
+            background-image: url('/images/features-hero.svg');
+            /*position: sticky;
+  top: 0;*/
+        }
+
+        .hero-container h1 {
+            position: relative;
+            top: 12px;
+        }
+
+        .hero-content {
+            flex: 1;
+            display: flex;
+            z-index: 100;
+            align-items: center;
+            margin-top: -102px;
+        }
+
+        @media only screen and (max-width: 75em) {
+            .hero-container {
+                height: 0px;
+            }
+            .hero-content {
+                margin-top: 100px;
+            }
+        }
+        /* 768px */
+
+        @media only screen and (max-width: 48em) {
+            .hero-container {
+                background-image: -webkit-linear-gradient( -30deg, rgb(44, 212, 217) 49%, rgb(83, 51, 237) 100%);
+                background-image: -moz-linear-gradient( -30deg, rgb(44, 212, 217) 49%, rgb(83, 51, 237) 100%);
+                background-image: -ms-linear-gradient( -30deg, rgb(44, 212, 217) 49%, rgb(83, 51, 237) 100%);
+                max-height: auto;
+                min-height: 0px;
+                margin-left: 0px;
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+            .hero-content {
+                margin: 0px;
+                padding-top: 40px;
+                padding-bottom: 120px;
+            }
+        }
+
+        #eta-screen {
+            max-width: 912px;
+        }
+        /*1200px */
+
+        @media only screen and (max-width: 75em) {
+            #eta-screen img {
+                width: 100%;
+                height: auto;
+            }
+            #eta-screen {
+                margin: 0 auto;
+                margin-top: 66px;
+            }
+            #eta-man {
+                display: none;
+            }
+        }
+        /*768px*/
+
+        @media only screen and (max-width: 48em) {
+            #eta-screen {
+                margin-top: 20px;
+            }
+        }
+        /*1200px*/
+
+        @media only screen and (min-width: 75em) {
+            #eta-screen {
+                position: absolute;
+                top: 50px;
+                right: -160px
+            }
+            #eta-screen img {
+                display: block;
+            }
+        }
+        /* Peace Of Mind */
+
+        #peace-of-mind-group {
+            position: absolute;
+            right: -120px;
+            top: -90px;
+            z-index: -1
+        }
+
+        #peace-of-mind-group+div {
+            z-index: 400;
+            position: relative;
+        }
+        /*768px*/
+
+        @media only screen and (max-width: 47.9999em) {
+            #peace-of-mind-group {
+                position: relative;
+                top: 0px;
+                left: -20px;
+                right: 0px;
+                transform: scaleX(-1);
+                filter: FlipH;
+            }
+        }
+
+        #support-that-cares-group {
+            position: absolute;
+            left: 40px;
+            top: -200px;
+            z-index: -1
+        }
+        /*768px*/
+
+        @media only screen and (max-width: 47.9999em) {
+            #support-that-cares-group {
+                position: relative;
+                top: 0px;
+                left: 0px;
+            }
+        }
+        /* Support That Cares */
+
+        #support-that-cares-group+div {
+            position: relative;
+            z-index: -1
+        }
+
+        #features-group {
+            position: absolute;
+            right: 30px;
+            width: 65%;
+            top: -115px;
+            z-index: 200
+        }
+
+        #features-group+div {
+            position: relative;
+            z-index: -1
+        }
+
+        .bg--blue--purple {
+            background: #150773;
+        }
+        /*1152pxpx*/
+
+        @media only screen and (min-width: 72em) {
+            .bg--blue--purple {
+                position: relative;
+                background-image: -moz-linear-gradient(0deg, #150773 0%, #150773 calc(49.999999% + 128px), #3D23C0 calc(50% + 128px), #3D23C0 100%);
+                background-image: -webkit-linear-gradient(0deg, #150773 0%, #150773 calc(50% + 128px), #3D23C0 calc(50% + 128px), #3D23C0 100%);
+            }
+        }
+
+        #features-group+div {
+            z-index: 400;
+            position: relative;
+        }
+
+        .grey-box {
+            background-color: #E1EAF7;
+            margin-top: 30px;
+            border-radius: 3px;
+            text-align: left;
+            padding: 30px;
+        }
+
+        .grey-box ul {
+            padding: 20px;
+            padding-left: 50px;
+            list-style-type: disc
+        }
+
+        .grey-box ul li a {
+            font-family: 'Brandon Text';
+            text-decoration: none;
+        }
+
+        #left-container {
+            margin-left: 0px;
+            padding-left: 0px;
+            height: 100vh;
+        }
+
+        .container .index-wrapper {
+            z-index: 1000;
+            display: block;
+            padding: 20px;
+            height: 80vh;
+            position: -webkit-sticky; // required for Safari
+            position: sticky;
+            top: 0;
+        }
+
+        .index-wrapper .bullets-index {
+            text-align: left;
+            padding-left: 50px;
+            padding-bottom: 30px;
+            font-family: 'Brandon Text';
+            top: 0;
+            display: block;
+            position: -webkit-sticky;
+            position: sticky;
+        }
+
+        .bullets-index li {
+            line-height: 3;
+        }
+
+        .bullets-index li a {
+            text-decoration: none;
+        }
+
+        .container .content-wrapper {
+            max-width: 940px;
+            padding: 32px 48px;
+            padding-right: 250px;
+            position: relative;
+        }
+
+        li.getstarted {
+            background: url('/images/startup.svg') no-repeat left top;
+            background-size: 28px 28px;
+            background-position: 5px 15px;
+            padding-left: 44px;
+            padding-top: 4px;
+        }
+
+        #chaps>li>ul.hide {
+            display: none;
+        }
+
+        #box-main {
+            padding: 0px;
+        }
+
+        #header-box {
+            height: 150px;
+            background-color: rgb(44, 212, 217);
+        }
+
+        .header-image {
+            height: 50px;
+            background-color: rgb(255, 255, 255);
+            /*border-radius: 5px;*/
+            padding: 10px;
+            margin-left: 65px;
+            margin-top: 30px;
+        }
+
+        #header-title {
+            color: white;
+            font-size: 30px;
+        }
+
+        #header-contents {
+            padding: 20px;
+        }
+
+        ol.header-contents-list li {
+            line-height: 2;
+        }
+
+        ol.header-contents-list li::before {
+            color: #5333ed;
+        }
+
+        .header-contents-list li a {
+            text-decoration: none;
+            font-family: 'Brandon Text'
+        }
+
+        body {
+            overflow-x: visible;
+        }
+        table.highlighttable{
+          background: #1C3041;
+          margin-bottom: 20px;
+          width: 100%;
+          overflow-x: auto;
+        }
+
+        pre {
+          font-family: 'Cousine', monospace;
+          font-size: 15px;
+          padding: 15px;
+          overflow-x: auto;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          text-align: justify;
+        }
+        td.linenos{
+          width: 40px;
+          border-right: 1px solid #6E7076;
+        }
+        .hide {
+          display: none;
+        }
+        input::placeholder {
+          color: grey;
+        }
+        input:focus::placeholder {
+          color: #eee;
+        }
+        #search_bar_sidenav input{
+          border-bottom-color: black;
+          background: #eee;
+        }
+        #search_bar_sidenav svg{
+          background: #eee;
+          width: 30px;
+        }
+
+        table.markdown-table{
+          margin-left: auto;
+          margin-right: auto;
+        }
+        table.markdown-table td,
+        th {
+            padding: 10px;
+
+        }
+
+        table.markdown-table tr {
+            border: 1px solid #dddddd;
+        }
+        table.markdown-table thead{
+          color: #2cd4d9;
+          font-weight: 500;
+          text-align: center;
+        }
+        table.markdown-table span.inline-code{
+          border: none;
+          font-size: 13px;
+          font-family: 'Cousine', monospace;
+        }
+
+        a.anchor-link {
+          background-image: url('/images/hashtag.svg');
+          background-size: 20px 20px;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          opacity: 0.2;
+        }
+
+        .box:hover .row h3 a.anchor-link{
+          opacity: 1;
+        }
+
+        i {
+          font-style: italic;
+        }
+
+        /*768px*/
+
+        @media only screen and (max-width: 47.9999em) {
+            #features-group {
+                position: relative;
+                top: -0px;
+                width: 400px;
+                right: 0px;
+                transform: scaleX(-1);
+                filter: FlipH;
+            }
+            pre {
+              font-size: 12px;
+            }
+        @media only screen and (max-width: 320px) {
+            pre {
+              font-size: 10px;
+            }
+        @media only screen and (max-width: 75em) {
+          ul.bullet-list {
+            list-style-type: none;
+          }
+        }
+
+        }
+    </style>
+    <script type='text/javascript' src='/js/scripts/jquery.accordion.js'></script>
+    <script type='text/javascript' src='/js/scripts/smoothscroll.js'></script>
+    <script type='text/javascript' src='/js/scripts.js'></script>
+
+
+    <script type='text/javascript'>
+        var $ = jQuery;
+        $("#chaps > li").click(function() {
+            $(this).find("ul.assignments").toggleClass('hide');
+        });
+        $('a[href^="#"]').click(function() {
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top
+            }, 500);
+            return false;
+        });
+    </script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-89651019-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js'></script>
+    <script type='text/javascript'>
+    docsearch({
+      apiKey: 'f929f0935053f931f73bce38eef57ba5',
+      indexName: 'eta-lang',
+      inputSelector: '#search-docs',
+      debug: true // Set debug to true if you want to inspect the dropdown
+    });
+    docsearch({
+      apiKey: 'f929f0935053f931f73bce38eef57ba5',
+      indexName: 'eta-lang',
+      inputSelector: '#min-search-docs',
+      debug: true // Set debug to true if you want to inspect the dropdown
+    });
+    </script>
+</body>
+
+</html>
