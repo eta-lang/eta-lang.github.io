@@ -80,7 +80,7 @@ cacheFile :: String -> FilePath
 cacheFile file = cacheRoot </> file
 
 docsRoot :: FilePath
-docsRoot = "docs"
+docsRoot = "_docs"
 
 templatesRoot :: FilePath
 templatesRoot = "templates"
@@ -89,7 +89,7 @@ staticRoot :: FilePath
 staticRoot = "static"
 
 wwwRoot :: FilePath
-wwwRoot = "www"
+wwwRoot = "docs"
 
 notFound :: FilePath
 notFound = "not-found"
