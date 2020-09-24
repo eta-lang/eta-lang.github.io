@@ -103,7 +103,7 @@
                                 <div class="col-lg-12 col-sm-12 col-xs-12 grey-box mt--0">
                                   <ul class="color--grey bullet-list">
                                       <li><a href="https://tour.eta-lang.org" target="_blank">Tour of Eta</a></li>
-                                      <li><a href="/docs/" target="_blank">Official Documentation</a></li>
+                                      <li><a href="/docs" target="_blank">Official Documentation</a></li>
                                       <li><a href="/docs/tutorials" target="_blank">Official Tutorials</a></li>
                                   </ul>
                               </div>

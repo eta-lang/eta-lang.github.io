@@ -116,7 +116,7 @@ renderModulesIndex :: Maybe ([Intro], [[WithHole2 RenderMap]])
                    -> Rebuild (ByteString, RenderMap)
 renderModulesIndex (Just (intros, ms)) templatesPath modulesPath _contents sectionIntro =
   rerunIfChanged (newCacheFilePathMonitor modulesPath) (sectionIntro, intros) $ do
-    liftIO $ putStrLn $ "Rendering index page" ++ modulesPath
+    liftIO $ putStrLn $ "Rendering index page " ++ modulesPath
     monitorFiles $ map (monitorTemplate templatesPath)
       ["docs-modules", "main-header", "main-footer", "docs-module-row"]
     indexBody <- liftIO $ withHeist 2 $
@@ -154,7 +154,7 @@ renderModulesIndex Nothing templatesPath modulesPath contents sectionIntro = do
   case introType sectionIntro of
     IntroRecursive -> goSections templatesPath modulesPath contents
     _ -> rerunIfChanged (newCacheFilePathMonitor modulesPath) () $ do
-      liftIO $ putStrLn $ "Rendering index page" ++ modulesPath
+      liftIO $ putStrLn $ "Rendering index page " ++ modulesPath
       monitorFiles $ monitorTemplate modulesPath "index"
                    : map (monitorTemplate templatesPath) ["main-header", "main-footer"]
       indexBody <- liftIO $ withHeist 4 $
